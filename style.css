@@ -1,0 +1,326 @@
+/* BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'MangoGrotesque';
+    src: url('fonts/MangoGrotesque-Medium.woff2') format('woff2'),
+         url('fonts/MangoGrotesque-Medium.woff') format('woff');
+}
+/* TEXTO */
+
+body {
+    background-color: #F9F9F9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 24px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+h1 {
+    font-family: 'MangoGrotesque';
+    font-size: 100px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 100%;
+}
+
+h2 {
+    font-family: 'MangoGrotesque';
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 100%;
+}
+
+h3 {
+    font-family: 'MangoGrotesque';
+    font-size: 54px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 100%;
+}
+
+/* Estilo do botão */
+button {
+    background-color: #FFFFFF; /* Fundo branco */
+    border: 2px solid #383838; /* Contorno com espessura de 2px */
+    border-radius: 6px;
+    border-style: solid; /* Estilo de contorno */
+    color: #383838; /* Cor da fonte */
+    font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
+    font-weight: bold; /* Peso da fonte bold */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px 24px; /* Espaçamento interno: 20px (vertical), 12px (horizontal) */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: box-shadow 0.3s ease; /* Animação para a sombra */
+  }
+  
+  button:hover {
+    box-shadow: 4px 4px rgba(56, 56, 56, 1); /* Sombra no hover */
+  }
+
+button a {
+  color: inherit; /* Herdar a cor do botão (garante que não use a cor padrão do link) */
+  text-decoration: none; /* Remove sublinhado */
+  display: block; /* Garante que o link ocupe o espaço do botão */
+  width: 100%; /* O link ocupa toda a largura do botão */
+  height: 100%; /* O link ocupa toda a altura do botão */
+}
+
+button a:link,
+button a:visited,
+button a:hover,
+button a:active {
+  color: inherit; /* Mantém a cor do link herdada do botão */
+  text-decoration: none; /* Remove sublinhado em todas as variantes */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo do header */
+header {
+    display: flex; /* Layout flexível para alinhar os itens */
+    justify-content: space-between; /* Distribui os itens entre as extremidades */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 20px 100px; /* Espaçamento interno */
+  }
+  
+  .logo {
+    font-family: 'MangoGrotesque', sans-serif; /* Fonte MangoGrotesque */
+    font-size: 60px; /* Tamanho da fonte */
+    font-weight: 200; /* Peso regular */
+    color: #383838; /* Cor */
+  }
+
+  .logo a {
+    color: inherit; /* Herdar a cor do botão (garante que não use a cor padrão do link) */
+    text-decoration: none; /* Remove sublinhado */
+    display: block; /* Garante que o link ocupe o espaço do botão */
+    width: 100%; /* O link ocupa toda a largura do botão */
+    height: 100%; /* O link ocupa toda a altura do botão */
+  }
+  
+  a:link,
+   a:visited,
+   a:hover,
+   a:active {
+    color: inherit; /* Mantém a cor do link herdada do botão */
+    text-decoration: none; /* Remove sublinhado em todas as variantes */
+  }
+  
+  /* Estilo dos itens do menu */
+  nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Layout flexível */
+    gap: 30px; /* Espaçamento entre os itens */
+    margin: 0; /* Remove margem padrão */
+    padding: 0;
+  }
+  
+  nav ul li {
+    font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 180%;
+    font-weight: 400; /* Peso regular */
+    color: #383838; /* Cor */
+  }
+  
+  nav ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Mantém a cor do item */
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+  }
+
+/* Estilo da seção principal */
+.hero-section {
+    text-align: center;
+    padding: 50px 100px;
+    background-image: url('grid-background.png'); /* Adicionar a imagem de fundo */
+    background-repeat: repeat;
+}
+
+
+/* PROJETO EM DESTAQUE */
+.project-highlight {
+    display: flex; /* Layout flexível para alinhar horizontalmente */
+    justify-content: space-between; /* Distribui os itens */
+    align-items: center; /* Alinha ao centro verticalmente */
+    gap: 40px; /* Espaçamento entre texto e imagem */
+    padding: 60px 0; /* Espaçamento interno */
+  }
+  
+  .project-highlight-text {
+    flex: 1;
+  }
+  
+  .project-highlight-img {
+    flex: 1; 
+    display: flex; 
+    justify-content: center;
+  }
+  
+  .project-highlight-img img {
+    max-width: 100%; /* Ajusta para responsivo */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px;
+  }
+
+/* Seção de Projetos */
+.projects-section {
+  display: flex; /* Alinha os cards horizontalmente */
+  justify-content: space-between; /* Espaçamento entre os cards */
+  gap: 40px; /* Espaço entre cada card */
+  padding: 60px 0; /* Espaçamento superior e inferior */
+  flex-wrap: wrap; /* Permite quebra de linha no responsivo */
+}
+
+.project-card {
+  display: block; /* Garante que o link ocupe todo o card */
+  flex: 1;
+  max-width: calc(50% - 20px); /* Largura máxima dos cards */
+  border: 1px solid #E0E0E0; /* Borda sutil */
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que o conteúdo não exceda as bordas */
+  background-color: #FFFFFF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+  text-decoration: none; /* Remove sublinhado do link */
+  color: inherit; /* Herdar a cor padrão */
+}
+
+.project-card:hover {
+  transform: translateY(-4px); /* Eleva o card ao passar o mouse */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais forte */
+}
+
+/* Garante que o link no card não mude cor nem sublinhado */
+.project-card:link,
+.project-card:visited,
+.project-card:hover,
+.project-card:active {
+  color: inherit; /* Mantém a cor herdada */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Estilo para a imagem e outros elementos dentro do card */
+.project-card .imagem {
+  width: 100%; /* Ocupa toda a largura */
+  height: 300px; /* Define uma altura fixa desejada */
+  overflow: hidden; /* Garante que o conteúdo excedente seja cortado */
+}
+
+.project-card .imagem img {
+  width: 100%; /* A imagem ainda ocupa toda a largura do container */
+  height: 100%; /* A altura da imagem se ajusta ao container */
+  object-fit: cover; /* Corta a imagem para preencher o container */
+  object-position: top; /* Centraliza a imagem dentro do container */
+  border-bottom: 2px solid #E0E0E0; /* Separação com o conteúdo */
+}
+
+/* Ajuste para garantir que o conteúdo dentro do link (a) não receba eventos de clique próprios */
+.project-card img, 
+.project-card h3, 
+.project-card p, 
+.project-card .tags {
+  pointer-events: none; /* Desabilita o comportamento padrão de clique nos elementos internos */
+}
+
+  
+  .conteudo {
+    padding: 20px; /* Espaçamento interno */
+  }
+  
+  .tags {
+    margin-bottom: 16px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #383838; /* Cor de fundo */
+    color: #FFFFFF; /* Cor do texto */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-right: 8px; /* Espaço entre as tags */
+    border-radius: 16px;
+  }
+
+  
+/* Estilo da seção de contato */
+.contact-section {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input, .contact-section textarea {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #BCBBBB;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo da página sobre */
+
+
+/* Perfil section*/ 
+
+.perfil-section {
+  display: flex; /* Cria um layout em colunas */
+  align-items: center; /* Alinha os itens ao topo */
+  justify-content: space-between; /* Distribui os itens */
+  gap: 40px; /* Espaçamento entre as colunas */
+  padding: 60px 20px;
+  margin: 0 auto; /* Centraliza a seção */
+  max-width: 1200px; /* Limita a largura máxima da seção */
+  color: 383838;
+  text-align: left;
+  padding: 50px 100px;
+}
+
+.perfil-section-foto {
+  display: flex;
+  flex-direction: column; /* Organiza <h1> e a imagem na vertical */
+  align-items: center;
+}
+
+.perfil-section-foto img {
+  height: 300px; /* Define uma altura fixa */
+  width: auto; /* Mantém a largura proporcional à altura */
+  border-radius: 50%; /* Faz a imagem ficar circular */
+  object-fit: cover; /* Corta a imagem para se ajustar ao container */
+}
+
+/* Estilo do rodapé */
+
+footer {
+    color: #848484;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
