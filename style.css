@@ -9,45 +9,39 @@
     src: url('fonts/MangoGrotesque-Medium.woff2') format('woff2'),
          url('fonts/MangoGrotesque-Medium.woff') format('woff');
 }
-/* TEXTO */
+
 body {
     background-color: #F9F9F9;
-    color: #333;
+    color: #383838;
     line-height: 1.6;
-    font-size: 16px;
 }
 
+/* TEXTO */
 p {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     margin-bottom: 24px;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 24px;
     }
 
+h1, h2, h3 {
+      font-family: 'MangoGrotesque';
+      font-weight: 500;
+      margin-bottom: 8px;
+      line-height: 100%;
+  }
+  
 h1 {
-    font-family: 'MangoGrotesque';
     font-size: 100px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    line-height: 100%;
 }
 
 h2 {
-    font-family: 'MangoGrotesque';
     font-size: 70px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    line-height: 100%;
 }
 
 h3 {
-    font-family: 'MangoGrotesque';
     font-size: 54px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    line-height: 100%;
 }
 
 /* Estilo do botão */
@@ -92,7 +86,7 @@ button a:active {
     margin: 0 auto;
 }
 
-/* Estilo do header */
+/* HEADER */
 header {
   position: relative; /* Define o header como referência para o posicionamento absoluto */
   display: flex;
@@ -121,32 +115,29 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-/* Estilo do menu de navegação */
+/* MENU */
 
-/* Estilo do menu de navegação em telas maiores */
 nav ul {
   display: flex; /* Exibe os itens do menu lado a lado */
   list-style: none; /* Remove as bolinhas */
-  padding: 0; /* Remove o padding padrão */
-  margin: 0; /* Remove a margem padrão */
-  gap: 20px; /* Espaçamento entre os itens */
+  padding: 0;
+  margin: 0;
+  gap: 20px; 
 }
 
-/* Estilo dos links do menu */
 nav ul li {
   display: inline-block;
 }
 
 nav ul a {
-  text-decoration: none; /* Remove o sublinhado dos links */
+  text-decoration: none;  
   color: #383838; /* Cor dos links */
-  padding: 10px 20px; /* Padding para espaçar os itens */
-  font-size: 16px; /* Ajusta o tamanho da fonte */
-  font-family: 'Montserrat', sans-serif; /* Define a fonte */
+  padding: 10px 20px; 
+  font-size: 16px; 
+  font-family: 'Montserrat', sans-serif; 
   transition: color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
 }
 
-/* Esconde o menu hamburguer em telas maiores */
 .hamburger {
   display: none; /* Oculta o ícone de hambúrguer por padrão */
   cursor: pointer;
@@ -154,10 +145,9 @@ nav ul a {
   color: #000;
 }
 
-/* Media Query para telas menores */
 @media (max-width: 768px) {
   header {
-    padding: 20px 60px;
+    padding: 20px 40px 0px 40px;
   }
 
   nav ul {
@@ -173,25 +163,30 @@ nav ul a {
     z-index: 10; /* Garante que o menu fique acima de outros elementos */
   }
 
-  /* Exibe o menu quando a classe 'active' é adicionada */
   nav ul.active {
     display: flex; /* Exibe o menu ao clicar no menu hambúrguer */
   }
 
-  /* Mostra o menu hamburguer em telas menores */
   .hamburger {
     display: block; /* Mostra o ícone de hambúrguer em telas pequenas */
   }
   
+  
 }
 
-
-/* Estilo da seção principal */
+/* HERO SECTION */
 .hero-section {
     text-align: center;
     padding: 50px 100px;
-    background-image: url('grid-background.png'); /* Adicionar a imagem de fundo */
-    background-repeat: repeat;
+    background-image: url('./imgs/grid-background.png.png');
+}
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 60px 24px; 
+  }
+  .hero-section h1 {
+    font-size: 72px;
+  }
 }
 
 
