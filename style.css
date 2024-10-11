@@ -10,7 +10,6 @@
          url('fonts/MangoGrotesque-Medium.woff') format('woff');
 }
 /* TEXTO */
-
 body {
     background-color: #F9F9F9;
     color: #333;
@@ -53,16 +52,16 @@ h3 {
 
 /* Estilo do botão */
 button {
-    background-color: #FFFFFF; /* Fundo branco */
-    border: 2px solid #383838; /* Contorno com espessura de 2px */
+    background-color: #FFFFFF; 
+    border: 2px solid #383838;
     border-radius: 6px;
-    border-style: solid; /* Estilo de contorno */
-    color: #383838; /* Cor da fonte */
-    font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
-    font-weight: bold; /* Peso da fonte bold */
-    font-size: 16px; /* Tamanho da fonte */
-    padding: 10px 24px; /* Espaçamento interno: 20px (vertical), 12px (horizontal) */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border-style: solid; 
+    color: #383838; 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold; 
+    font-size: 16px; 
+    padding: 10px 24px; 
+    cursor: pointer;
     transition: box-shadow 0.3s ease; /* Animação para a sombra */
   }
   
@@ -95,60 +94,97 @@ button a:active {
 
 /* Estilo do header */
 header {
-    display: flex; /* Layout flexível para alinhar os itens */
-    justify-content: space-between; /* Distribui os itens entre as extremidades */
-    align-items: center; /* Alinha verticalmente ao centro */
-    padding: 20px 100px; /* Espaçamento interno */
-  }
-  
-  .logo {
-    font-family: 'MangoGrotesque', sans-serif; /* Fonte MangoGrotesque */
-    font-size: 60px; /* Tamanho da fonte */
-    font-weight: 200; /* Peso regular */
-    color: #383838; /* Cor */
+  position: relative; /* Define o header como referência para o posicionamento absoluto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.logo {
+  font-family: 'MangoGrotesque', sans-serif;
+  font-size: 60px;
+  font-weight: 200;
+  color: #383838;
+}
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Estilo do menu de navegação */
+
+/* Estilo do menu de navegação em telas maiores */
+nav ul {
+  display: flex; /* Exibe os itens do menu lado a lado */
+  list-style: none; /* Remove as bolinhas */
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos links do menu */
+nav ul li {
+  display: inline-block;
+}
+
+nav ul a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #383838; /* Cor dos links */
+  padding: 10px 20px; /* Padding para espaçar os itens */
+  font-size: 16px; /* Ajusta o tamanho da fonte */
+  font-family: 'Montserrat', sans-serif; /* Define a fonte */
+  transition: color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+}
+
+/* Esconde o menu hamburguer em telas maiores */
+.hamburger {
+  display: none; /* Oculta o ícone de hambúrguer por padrão */
+  cursor: pointer;
+  font-size: 40px; /* Ajusta o tamanho do ícone do hambúrguer */
+  color: #000;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 60px;
   }
 
-  .logo a {
-    color: inherit; /* Herdar a cor do botão (garante que não use a cor padrão do link) */
-    text-decoration: none; /* Remove sublinhado */
-    display: block; /* Garante que o link ocupe o espaço do botão */
-    width: 100%; /* O link ocupa toda a largura do botão */
-    height: 100%; /* O link ocupa toda a altura do botão */
-  }
-  
-  a:link,
-   a:visited,
-   a:hover,
-   a:active {
-    color: inherit; /* Mantém a cor do link herdada do botão */
-    text-decoration: none; /* Remove sublinhado em todas as variantes */
-  }
-  
-  /* Estilo dos itens do menu */
   nav ul {
-    list-style: none; /* Remove os marcadores de lista */
-    display: flex; /* Layout flexível */
-    gap: 30px; /* Espaçamento entre os itens */
-    margin: 0; /* Remove margem padrão */
-    padding: 0;
+    display: none; /* Esconde o menu em telas menores por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 10px); /* Posiciona o menu logo abaixo do header */
+    right: 0;
+    width: 100%; /* O menu ocupa toda a largura da tela */
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 10; /* Garante que o menu fique acima de outros elementos */
+  }
+
+  /* Exibe o menu quando a classe 'active' é adicionada */
+  nav ul.active {
+    display: flex; /* Exibe o menu ao clicar no menu hambúrguer */
+  }
+
+  /* Mostra o menu hamburguer em telas menores */
+  .hamburger {
+    display: block; /* Mostra o ícone de hambúrguer em telas pequenas */
   }
   
-  nav ul li {
-    font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
-    font-size: 16px; /* Tamanho da fonte */
-    line-height: 180%;
-    font-weight: 400; /* Peso regular */
-    color: #383838; /* Cor */
-  }
-  
-  nav ul li a {
-    text-decoration: none; /* Remove sublinhado dos links */
-    color: inherit; /* Mantém a cor do item */
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline; /* Adiciona sublinhado no hover */
-  }
+}
+
 
 /* Estilo da seção principal */
 .hero-section {
