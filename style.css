@@ -188,113 +188,160 @@ nav ul a {
   }
 }
 
-
 /* PROJETO EM DESTAQUE */
+
 .project-highlight {
-    display: flex; /* Layout flexível para alinhar horizontalmente */
-    justify-content: space-between; /* Distribui os itens */
-    align-items: center; /* Alinha ao centro verticalmente */
-    gap: 40px; /* Espaçamento entre texto e imagem */
-    padding: 60px 0; /* Espaçamento interno */
+  display: flex; /* Layout flexível para alinhar horizontalmente */
+  justify-content: space-between; /* Distribui os itens */
+  align-items: center; /* Alinha ao centro verticalmente */
+  gap: 40px; /* Espaçamento entre texto e imagem */
+  padding: 60px 0; /* Espaçamento interno */
+}
+
+.project-highlight-text {
+  flex: 1;
+}
+
+.project-highlight-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.project-highlight-img img {
+  max-width: 100%; /* Ajusta para responsivo */
+  height: auto; /* Mantém a proporção */
+  border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+  .project-highlight {
+    flex-direction: column; /* Alinha os itens um em cima do outro */
+    text-align: center; 
+    padding: 0;
   }
-  
-  .project-highlight-text {
-    flex: 1;
-  }
-  
+
   .project-highlight-img {
-    flex: 1; 
-    display: flex; 
-    justify-content: center;
+    order: 1; /* Coloca a imagem primeiro */
+    margin-bottom: 20px;
   }
-  
-  .project-highlight-img img {
-    max-width: 100%; /* Ajusta para responsivo */
-    height: auto; /* Mantém a proporção */
-    border-radius: 8px;
+
+  .project-highlight-text {
+    order: 2; /* Coloca o texto depois da imagem */
   }
+
+  .project-highlight-text a {
+    margin-top: 20px; /* Espaçamento entre o texto e o botão */
+  }
+
+  .project-highlight-text button {
+    width: auto; /* Permite que o botão ajuste sua largura automaticamente */
+  }
+}
 
 /* Seção de Projetos */
 .projects-section {
-  display: flex; /* Alinha os cards horizontalmente */
-  justify-content: space-between; /* Espaçamento entre os cards */
-  gap: 40px; /* Espaço entre cada card */
-  padding: 60px 0; /* Espaçamento superior e inferior */
-  flex-wrap: wrap; /* Permite quebra de linha no responsivo */
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 0;
+  flex-wrap: wrap;
 }
-
+.project-button-container {
+  width: 100%; /* O botão ocupa toda a largura da seção */
+  display: flex;
+  justify-content: center; /* Centraliza o botão horizontalmente */
+}
 .project-card {
-  display: block; /* Garante que o link ocupe todo o card */
+  display: block;
   flex: 1;
-  max-width: calc(50% - 20px); /* Largura máxima dos cards */
-  border: 1px solid #E0E0E0; /* Borda sutil */
-  border-radius: 8px; /* Bordas arredondadas */
-  overflow: hidden; /* Garante que o conteúdo não exceda as bordas */
+  max-width: calc(50% - 20px);
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  overflow: hidden;
   background-color: #FFFFFF;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
-  text-decoration: none; /* Remove sublinhado do link */
-  color: inherit; /* Herdar a cor padrão */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px; /* Espaçamento entre os cards */
 }
 
 .project-card:hover {
-  transform: translateY(-4px); /* Eleva o card ao passar o mouse */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais forte */
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Garante que o link no card não mude cor nem sublinhado */
 .project-card:link,
 .project-card:visited,
 .project-card:hover,
 .project-card:active {
-  color: inherit; /* Mantém a cor herdada */
-  text-decoration: none; /* Remove sublinhado */
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Estilo para a imagem e outros elementos dentro do card */
 .project-card .imagem {
-  width: 100%; /* Ocupa toda a largura */
-  height: 300px; /* Define uma altura fixa desejada */
-  overflow: hidden; /* Garante que o conteúdo excedente seja cortado */
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
 .project-card .imagem img {
-  width: 100%; /* A imagem ainda ocupa toda a largura do container */
-  height: 100%; /* A altura da imagem se ajusta ao container */
-  object-fit: cover; /* Corta a imagem para preencher o container */
-  object-position: top; /* Centraliza a imagem dentro do container */
-  border-bottom: 2px solid #E0E0E0; /* Separação com o conteúdo */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 2px solid #E0E0E0;
 }
 
-/* Ajuste para garantir que o conteúdo dentro do link (a) não receba eventos de clique próprios */
 .project-card img, 
 .project-card h3, 
 .project-card p, 
 .project-card .tags {
-  pointer-events: none; /* Desabilita o comportamento padrão de clique nos elementos internos */
+  pointer-events: none;
 }
 
-  
-  .conteudo {
-    padding: 20px; /* Espaçamento interno */
-  }
-  
-  .tags {
-    margin-bottom: 16px;
-  }
-  
-  .tag {
-    display: inline-block;
-    background-color: #383838; /* Cor de fundo */
-    color: #FFFFFF; /* Cor do texto */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    padding: 6px 12px;
-    margin-right: 8px; /* Espaço entre as tags */
-    border-radius: 16px;
+.conteudo {
+  padding: 20px;
+}
+
+.tags {
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #383838;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 16px;
+}
+
+
+
+@media (max-width: 767px) {
+  .projects-section {
+    flex-direction: column; /* Muda a direção dos cards para empilhar */
+    gap: 20px; /* Reduz o espaçamento entre os cards */
   }
 
-  
-/* Estilo da seção de contato */
+  .project-card {
+    max-width: 100%; /* Faz os cards ocuparem 100% da largura */
+  }
+
+  #truncated-text {
+    display: -webkit-box; /* Define o modelo de layout flexível em blocos */
+    -webkit-box-orient: vertical; /* Define a orientação do conteúdo como vertical */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
+    text-overflow: ellipsis; /* Adiciona os três pontos no final */
+    -webkit-line-clamp: 2; /* Limita o número de linhas (por exemplo, 3) */
+    line-clamp: 3; /* Para navegadores com suporte */
+  }
+}
+
+/* CONTATO */
 .contact-section {
     text-align: center;
     padding: 80px 0;
@@ -314,11 +361,17 @@ nav ul a {
     border-radius: 5px;
     font-size: 16px;
 }
+@media (max-width: 767px) {
+  .contact-section {
+    padding: 0px 24px; 
+  }
+  .contact-section h2 {
+    font-size: 72px;
+  }
+}
+
 
 /* Estilo da página sobre */
-
-
-/* Perfil section*/ 
 
 .perfil-section {
   display: flex; /* Cria um layout em colunas */
@@ -345,6 +398,22 @@ nav ul a {
   border-radius: 50%; /* Faz a imagem ficar circular */
   object-fit: cover; /* Corta a imagem para se ajustar ao container */
 }
+
+@media (max-width: 767px) {
+  .perfil-section {
+    flex-direction: column; /* Muda a direção dos cards para empilhar */
+    gap: 20px; /* Reduz o espaçamento entre os cards */
+    padding: 0px 40px; 
+  }
+  .perfil-section h1 {
+    font-size: 72px;
+    padding-top: 24px;
+  }
+  .perfil-section p {
+    padding-bottom: 24px;
+  }
+}
+
 
 /* Estilo do rodapé */
 
