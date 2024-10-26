@@ -32,7 +32,7 @@
     <section class="hero-section">
         <h1>Portfólio de design</h1>
         <p>Olá, me chamo malu! sou designer com 10 anos de experiência em empresas de tecnologia, varejo e consultoria.
-            Atuo de ponta a ponta no design de produtos digitais, criação de marcas e identidade visual.</p>
+            Atuo de ponta a ponta no design de produtos digitais e com criação de marcas e identidade visual.</p>
             <button><a href="pages/projetos.html">Ver projetos</a></button>
     </section>
 
@@ -97,24 +97,48 @@
 </div>
     </section>
 
-    <!-- CONTATO -->
-    <section class="contact-section" id="contato">
-        <h2>Vamos conversar?</h2>
-        <p>Me conte sobre sua necessidade, demanda ou ideia. Estou curiosa pra conhecer você e seu projeto.</p>
-        <form>
-            <input type="text" name="nome" placeholder="Nome">
-            <input type="tel" name="telefone" placeholder="Telefone">
-            <textarea name="mensagem" rows="5"
-                placeholder="Escreva um breve resumo do seu projeto e o que você precisa"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+<!-- CONTATO -->
+<section class="contact-section" id="contato">
+    <h2>Vamos conversar?</h2>
+    <p>Me conte sobre sua necessidade, demanda ou ideia. Estou curiosa pra conhecer você e seu projeto.</p>
+    <form id="contactForm" action="https://formspree.io/f/xnnqjqrd" method="POST">
+        <input type="text" id="name" name="name" placeholder="Nome" required>
 
-    <footer>
-        <p>&copy; 2024 MALU - Todos os direitos reservados.</p>
-    </footer>
+        <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+       
+        <textarea id="message" name="message" placeholder="Escreva um breve resumo do seu projeto e o que você precisa" required></textarea>
+    
+        <button type="submit">Enviar</button>
+    </form>
+</section>
 
+    
+    
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>Site desenvolvido por mim como parte do meu processo de aprendizado em programação.</p>
+        <div class="social-icons">
+            <a href="https://github.com/tsmalu" target="_blank">
+                <img src="imgs/icon-github.png" alt="GitHub Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/tsmalu/" target="_blank">
+                <img src="imgs/icon-linkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.behance.net/tsmalu" target="_blank">
+                <img src="imgs/icon-behance.png" alt="Behance Icon">
+            </a>
+        </div>
+    </div>
+</footer>
+
+  
+<!--- JAVASPRIPT-->
     <script src="script.js" defer></script>
+
+    
+
 </body>
 
 

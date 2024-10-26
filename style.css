@@ -342,34 +342,102 @@ nav ul a {
   }
 }
 
+
 /* CONTATO */
 .contact-section {
-    text-align: center;
-    padding: 80px 0;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.contact-section h2 {
+  margin-bottom: 10px;
+  color: #333; /* Ajuste a cor para melhor contraste */
+}
+
+.contact-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666; /* Ajuste de cor para complementar o design */
 }
 
 .contact-section form {
-    max-width: 600px;
-    margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left; /* Alinha o conteúdo do formulário à esquerda */
+  display: flex; /* Flexbox para centralizar o botão */
+  flex-direction: column; /* Coloca os elementos em uma coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.contact-section label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #333; /* Ajuste da cor do texto da label */
+  margin-bottom: 5px;
 }
 
 .contact-section input, .contact-section textarea {
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #BCBBBB;
-    border-radius: 5px;
-    font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #BCBBBB;
+  border-radius: 5px;
+  font-size: 16px;
 }
+
+.contact-section button {
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.contact-section button:hover {
+  background-color: #555;
+}
+
+.message-box {
+  width: 600px; /* Define a largura fixa */
+  max-width: 90%; /* Garante que a largura se ajuste em telas menores */
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  padding: 16px;
+  margin: 20px auto; /* Centraliza horizontalmente */
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.success-message {
+  color: #333;
+}
+
+.error-message {
+  color: #a6231e; /* Cor de erro (vermelha) */
+}
+
+
+
+/* Responsividade */
 @media (max-width: 767px) {
   .contact-section {
-    padding: 0px 24px; 
+      padding: 0px 24px;
   }
   .contact-section h2 {
-    font-size: 72px;
+      font-size: 24px;
   }
 }
+
 
 
 /* Estilo da página sobre */
@@ -418,9 +486,27 @@ nav ul a {
 
 /* Estilo do rodapé */
 
-footer {
-    color: #848484;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+.footer {
+  padding: 20px;
+  text-align: center;
 }
+
+.footer-content {
+  font-family: 'Montserrat', sans-serif;
+  color: #383838;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
