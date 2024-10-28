@@ -13,10 +13,13 @@ hamburger.addEventListener('click', () => {
 // Truncamento do texto
 const textElement = document.getElementById('truncated-text'); // Seleciona o elemento pelo ID
 const maxChars = 110; // Limite de caracteres desejado
-const originalText = textElement.innerText;
 
-if (originalText.length > maxChars) {
-  textElement.innerText = originalText.substring(0, maxChars) + '...'; // Trunca o texto
+if (textElement) { // Verifica se o elemento existe antes de acessá-lo
+  const originalText = textElement.innerText;
+
+  if (originalText.length > maxChars) {
+    textElement.innerText = originalText.substring(0, maxChars) + '...'; // Trunca o texto
+  }
 }
 
 
@@ -71,3 +74,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
       document.querySelector(".contact-section").appendChild(errorMessage);
   }
 });
+
+
+
+

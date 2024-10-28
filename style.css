@@ -130,13 +130,30 @@ nav ul li {
 }
 
 nav ul a {
+  position: relative;
   text-decoration: none;  
-  color: #383838; /* Cor dos links */
+  color: #383838;
   padding: 10px 20px; 
   font-size: 16px; 
   font-family: 'Montserrat', sans-serif; 
-  transition: color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+  transition: color 0.3s ease;
 }
+
+nav ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Começa com largura zero */
+  height: 2px;
+  background-color: #383838; /* Cor da linha */
+  transition: width 0.3s ease-in-out; /* Animação da largura */
+}
+
+nav ul a:hover::after {
+  width: 100%; /* Expande a linha para a largura total do link */
+}
+
 
 .hamburger {
   display: none; /* Oculta o ícone de hambúrguer por padrão */
@@ -188,6 +205,45 @@ nav ul a {
   }
 }
 
+.hero-section h1 {
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  animation: slideUp 1s ease-out forwards; /* Aplica a animação */
+}
+
+.hero-section p {
+  opacity: 0; /* Oculto no início */
+  animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+  animation-delay: 0.5s; 
+}
+
+
+.hero-section button {
+  opacity: 0;
+  transform: translateY(40px); /* Começa deslocado para baixo */
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 1s; /* Adiciona atraso para o botão aparecer depois do parágrafo */
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Posição inicial (abaixo) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Posição final (no lugar) */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* PROJETO EM DESTAQUE */
 
 .project-highlight {
@@ -196,7 +252,14 @@ nav ul a {
   align-items: center; /* Alinha ao centro verticalmente */
   gap: 40px; /* Espaçamento entre texto e imagem */
   padding: 60px 0; /* Espaçamento interno */
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  animation: slideUp 1.5s ease-out forwards;
+  animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
 }
+
+
+
 
 .project-highlight-text {
   flex: 1;
@@ -246,7 +309,17 @@ nav ul a {
   gap: 40px;
   padding: 60px 0;
   flex-wrap: wrap;
-}
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  }
+  
+  /* Classe que ativa a animação */
+  .projects-section.animate {
+    opacity: 1;
+    transform: translateY(0); /* Posição final */
+  }
+  
 .project-button-container {
   width: 100%; /* O botão ocupa toda a largura da seção */
   display: flex;
@@ -347,7 +420,16 @@ nav ul a {
 .contact-section {
   text-align: center;
   padding: 80px 0;
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
+
+.contact-section.animate {
+  opacity: 1;
+  transform: translateY(0); /* Posição final */
+}
+
 
 .contact-section h2 {
   margin-bottom: 10px;
@@ -438,6 +520,27 @@ nav ul a {
   }
 }
 
+/* Padrão para as seções, visíveis até o JS carregar */
+.projects-section, .contact-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* Torna as seções invisíveis e deslocadas apenas se o JavaScript estiver ativo */
+body.js-enabled .projects-section,
+body.js-enabled .contact-section {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Classe `animate` ativa a animação para tornar visível */
+.projects-section.animate, .contact-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 
 /* Estilo da página sobre */
@@ -453,7 +556,26 @@ nav ul a {
   color: 383838;
   text-align: left;
   padding: 50px 100px;
-}
+
+  }
+  
+  .perfil-section h1 {
+    opacity: 0; /* Oculto no início */
+    transform: translateY(50px); /* Começa deslocado para baixo */
+    animation: slideUp 1s ease-out forwards; /* Aplica a animação */
+  }
+
+  .perfil-section p {
+    opacity: 0; /* Oculto no início */
+    transform: translateY(50px); /* Começa deslocado para baixo */
+    animation: slideUp 1s ease-out forwards; /* Aplica a animação */
+  }
+
+  /* Classe que ativa a animação */
+  .perfil-section.animate {
+    opacity: 1;
+    transform: translateY(0); /* Posição final */
+  }
 
 .perfil-section-foto {
   display: flex;
@@ -466,7 +588,10 @@ nav ul a {
   width: auto; /* Mantém a largura proporcional à altura */
   border-radius: 50%; /* Faz a imagem ficar circular */
   object-fit: cover; /* Corta a imagem para se ajustar ao container */
-}
+    opacity: 0; /* Oculto no início */
+    animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+    animation-delay: 0.5s; 
+  }
 
 @media (max-width: 767px) {
   .perfil-section {
@@ -510,3 +635,97 @@ nav ul a {
   height: 24px;
 }
 
+
+
+/* Estilo do elemento animado */
+
+.hero-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.animações {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  padding: 100px 0 300px;
+  align-items: center;
+}
+
+.elemento-animado {
+  width: 200px;
+  height: 200px;
+  background-color: #0052cc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+
+  animation-duration: 3s;
+  animation-name: spin;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes spin { 
+  0% {
+  }
+  50% {
+    scale: 1.5;
+    transform: rotate(0);
+    border-radius: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 50%;
+    scale: 1.5;
+  }  
+}
+
+/* Estilos específicos para o segundo elemento */
+.elemento-animado-2 {
+  background-color: #383838; 
+  animation-fill-mode: forwards; 
+  animation-duration: 3s;
+  animation-name: spin;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal; 
+  animation-play-state: paused;
+}
+.elemento-animado-2:hover{ 
+  animation-play-state: running;
+}
+
+/* LOADING */
+
+.loading {
+  height: 50px;
+  width: 50px;
+  border: 6px solid rgb(139, 49, 230);
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgb(139, 49, 230), 0 0 8px rgb(139, 49, 230) inset;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 10;
+  animation: 2s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  33% {
+    transform: rotateX(180deg) rotateY(0) rotateZ(0);
+  }
+  67% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+  }
+}
