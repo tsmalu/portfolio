@@ -196,9 +196,12 @@ nav ul a:hover::after {
     text-align: center;
     padding: 50px 100px;
 }
+
 @media (max-width: 767px) {
   .hero-section {
     padding: 60px 24px; 
+    margin-left: 16px; /* Margem lateral esquerda */
+    margin-right: 16px; /* Margem lateral direita */
   }
   .hero-section h1 {
     font-size: 72px;
@@ -516,7 +519,7 @@ nav ul a:hover::after {
       padding: 0px 24px;
   }
   .contact-section h2 {
-      font-size: 24px;
+      font-size: 72px;
   }
 }
 
