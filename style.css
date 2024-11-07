@@ -25,7 +25,7 @@ p {
     margin: 0 auto 24px;
     }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
       font-family: 'MangoGrotesque';
       font-weight: 500;
       margin-bottom: 8px;
@@ -42,6 +42,10 @@ h2 {
 
 h3 {
     font-size: 54px;
+}
+
+h4 {
+  font-size: 36px;
 }
 
 /* Estilo do botão */
@@ -200,8 +204,8 @@ nav ul a:hover::after {
 @media (max-width: 767px) {
   .hero-section {
     padding: 60px 24px; 
-    margin-left: 16px; /* Margem lateral esquerda */
-    margin-right: 16px; /* Margem lateral direita */
+    margin-left: 24px; /* Margem lateral esquerda */
+    margin-right: 24px; /* Margem lateral direita */
   }
   .hero-section h1 {
     font-size: 72px;
@@ -731,4 +735,321 @@ body.js-enabled .contact-section {
   100% {
     transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
   }
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 28px;
+  text-align: left; /* Centraliza o breadcrumb */
+}
+
+.breadcrumb a {
+  color: #383838;
+  text-decoration: none;
+  margin: 0 5px; /* Espaçamento entre os links */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #383838; /* Cor para o texto não clicável */
+  font-weight: 600;
+  margin: 0 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* Estrutura Projeto */
+.project-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0; /* Remove qualquer margem padrão */
+}
+
+.project-title .tags {
+margin-top: 16px;
+margin-bottom: 30px;
+}
+.project-content p {
+  max-width: 100%; /* Garante que o parágrafo ocupe toda a largura do contêiner */
+}
+
+/* Componente de post */
+.author-info {
+  display: flex;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  color: #333;
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author-name {
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.follow {
+  font-weight: normal;
+  color: #888;
+  margin-left: 5px;
+}
+
+.publication-details {
+  color: #888;
+  margin-top: 4px;
+}
+
+.publication-name {
+  font-weight: bold;
+  color: #333;
+}
+
+
+.section-introduction img {
+  width: 800px; /* Mantém a largura proporcional à altura */
+    opacity: 0; /* Oculto no início */
+    animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+    animation-delay: 0.5s; 
+  }
+
+/* Imagem CSD */
+.project-csd-image {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente, se necessário */
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* Centraliza o contêiner na página */
+  position: relative;
+  padding-bottom: 36px;
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  animation: slideUp 1.5s ease-out forwards;
+  animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
+}
+
+.project-csd-image img {
+  max-width: 60%; /* Define a largura máxima para a imagem */
+  width: 100%; /* Permite que a imagem ocupe toda a largura disponível dentro do contêiner */
+  object-fit: cover;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+
+/* Imagem workshop */
+.project-workshop-images {
+  display: flex;
+  gap: 16px; /* Espaço entre as imagens */
+  width: 100vw; /* Ocupa toda a largura da janela de visualização */
+  margin-left: calc(50% - 50vw); /* Centraliza as imagens na página */
+  position: relative; /* Para evitar deslocamento inesperado */
+  padding-bottom: 36px;
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  animation: slideUp 1.5s ease-out forwards;
+  animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
+}
+
+.project-workshop-images img {
+  width: 100%; /* Cada imagem ocupa metade do contêiner */
+  max-width: 50%; /* Cada imagem ocupa 50% do contêiner */
+  object-fit: cover;
+}
+
+
+
+
+@media (max-width: 767px) {
+
+  .project-content {
+    padding: 0px 40px; 
+}
+
+  .project-content h2 {
+    font-size: 54px;
+  margin: 0; /* Remove qualquer margem padrão */
+}
+.section-introduction img {    
+    max-width: 100%; /* A primeira imagem ocupa 100% da largura */
+    opacity: 0; /* Oculto no início */
+    animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+    animation-delay: 0.5s; 
+  }
+
+  .project-workshop-images img:nth-child(2) {
+    display: none; /* Oculta a segunda imagem */
+  }
+
+  .project-workshop-images img:nth-child(1) {
+    max-width: 100%; /* A primeira imagem ocupa 100% da largura */
+  }
+
+  
+  .project-csd-image img {
+    max-width: 100%; /* A primeira imagem ocupa 100% da largura */
+    opacity: 0; /* Oculto no início */
+    animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+    animation-delay: 0.5s; 
+  }
+ 
+  }
+
+
+/* -------------------------------------------------------------------------------------*/
+
+/* Seção de Personas */
+.personas {
+  max-width: calc(100vw - 200px); /* Largura total menos 100px de margem em cada lado */
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  flex-wrap: wrap; /* Permite que os cartões quebrem linha em telas menores */
+}
+
+.personas-title {
+  width: 100%; /* Garante que o título ocupe toda a largura */
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.persona-card {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 16px;
+  flex: 1 1 calc(33.333% - 16px); /* Cada cartão ocupa aproximadamente 1/3 do contêiner */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px; /* Tamanho mínimo para cada cartão */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.persona-card.expanded {
+  background-color: #e0e0e0; /* Cor de fundo do cartão expandido */
+}
+
+.persona-header {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o ícone e o título */
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  text-align: left; /* Alinha o conteúdo à esquerda */
+}
+
+.toggle-icon {
+  font-size: 16px;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.persona-header p {
+  margin: 0;
+  display: inline;
+}
+
+.persona-description {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+  display: none; /* Esconde a descrição inicialmente */
+}
+
+.persona-card.expanded .persona-description {
+  display: block;
+}
+
+/* -------------------------------------------------------------------------------------*/
+/* jornada */
+.jornada-esg-image {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente, se necessário */
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* Centraliza o contêiner na página */
+  position: relative;
+  padding-bottom: 36px;
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  animation: slideUp 1.5s ease-out forwards;
+  animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
+}
+
+.jornada-esg-image img {
+  max-width: 60%; /* Define a largura máxima para a imagem */
+  width: 100%; /* Permite que a imagem ocupe toda a largura disponível dentro do contêiner */
+  object-fit: cover;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+/* -------------------------------------------------------------------------------------*/
+/* revisao */
+.revisao-esg-image {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente, se necessário */
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* Centraliza o contêiner na página */
+  position: relative;
+  padding-bottom: 36px;
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  animation: slideUp 1.5s ease-out forwards;
+  animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
+}
+
+.revisao-esg-image img {
+  max-width: 60%; /* Define a largura máxima para a imagem */
+  width: 100%; /* Permite que a imagem ocupe toda a largura disponível dentro do contêiner */
+  object-fit: cover;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* -------------------------------------------------------------------------------------*/
+/* Design */
+.design-esg-image {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente, se necessário */
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* Centraliza o contêiner na página */
+  position: relative;
+  padding-bottom: 36px;
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  animation: slideUp 1.5s ease-out forwards;
+  animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
+}
+
+.design-esg-image img {
+  max-width: 60%; /* Define a largura máxima para a imagem */
+  width: 100%; /* Permite que a imagem ocupe toda a largura disponível dentro do contêiner */
+  object-fit: cover;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
