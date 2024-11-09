@@ -16,6 +16,7 @@ body {
     line-height: 1.6;
 }
 
+/* ------------------------------------------------------------------------------------ */
 /* TEXTO */
 p {
     font-family: 'Montserrat', sans-serif;
@@ -48,6 +49,7 @@ h4 {
   font-size: 36px;
 }
 
+/* ------------------------------------------------------------------------------------ */
 /* Estilo do botão */
 button {
     background-color: #FFFFFF; 
@@ -90,6 +92,7 @@ button a:active {
     margin: 0 auto;
 }
 
+/* ------------------------------------------------------------------------------------ */
 /* HEADER */
 header {
   position: relative; /* Define o header como referência para o posicionamento absoluto */
@@ -119,6 +122,8 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
+
+/* ------------------------------------------------------------------------------------ */
 /* MENU */
 
 nav ul {
@@ -195,27 +200,23 @@ nav ul a:hover::after {
   
 }
 
+/* ------------------------------------------------------------------------------------ */
 /* HERO SECTION */
 .hero-section {
     text-align: center;
     padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
-
-@media (max-width: 767px) {
-  .hero-section {
-    padding: 60px 24px; 
-    margin-left: 24px; /* Margem lateral esquerda */
-    margin-right: 24px; /* Margem lateral direita */
-  }
-  .hero-section h1 {
-    font-size: 72px;
-  }
-}
-
 .hero-section h1 {
+  display: block;
+  text-align: center;
   opacity: 0; /* Oculto no início */
   transform: translateY(50px); /* Começa deslocado para baixo */
   animation: slideUp 1s ease-out forwards; /* Aplica a animação */
+  margin: 0 auto; 
 }
 
 .hero-section p {
@@ -224,13 +225,29 @@ nav ul a:hover::after {
   animation-delay: 0.5s; 
 }
 
-
 .hero-section button {
   opacity: 0;
   transform: translateY(40px); /* Começa deslocado para baixo */
   animation: slideUp 1s ease-out forwards;
   animation-delay: 1s; /* Adiciona atraso para o botão aparecer depois do parágrafo */
 }
+@media (max-width: 767px) {
+  .hero-section {
+   padding: 0px 24px;
+   flex-direction: column; /* Alinha os itens um em cima do outro */
+    text-align: center; 
+    padding: 0;
+  }
+  .hero-section h1 {
+      font-size: 72px !important;
+  }
+  .hero-section p {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+  }
+
+
 @keyframes slideUp {
   0% {
     opacity: 0;
@@ -251,6 +268,7 @@ nav ul a:hover::after {
   }
 }
 
+/* ------------------------------------------------------------------------------------ */
 /* PROJETO EM DESTAQUE */
 
 .project-highlight {
@@ -264,9 +282,6 @@ nav ul a:hover::after {
   animation: slideUp 1.5s ease-out forwards;
   animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
 }
-
-
-
 
 .project-highlight-text {
   flex: 1;
@@ -309,6 +324,7 @@ nav ul a:hover::after {
   }
 }
 
+/* ------------------------------------------------------------------------------------ */
 /* Seção de Projetos */
 .projects-section {
   display: flex;
@@ -320,8 +336,7 @@ nav ul a:hover::after {
   transform: translateY(50px); /* Começa deslocado para baixo */
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
   }
-  
-  /* Classe que ativa a animação */
+
   .projects-section.animate {
     opacity: 1;
     transform: translateY(0); /* Posição final */
@@ -359,6 +374,68 @@ nav ul a:hover::after {
   text-decoration: none;
 }
 
+
+/* Truncamento de texto para cards */
+.truncated-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /* Limita para 2 linhas */
+  line-clamp: 2; /* Para navegadores compatíveis */
+}
+
+/* Estilos específicos para a página de projetos */
+.projects-page .projects-section {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebra de linha para novos cards */
+  justify-content: space-between;
+  gap: 20px; /* Ajusta o espaço entre os cards */
+}
+
+/* Configuração para dois cards por linha */
+.projects-page .project-card {
+  flex: 1 1 calc(50% - 20px); /* Cada card ocupa 50% da largura com espaçamento */
+  max-width: calc(50% - 20px);
+  margin-bottom: 20px; /* Espaço entre os cards na linha inferior */
+}
+
+
+/* Truncamento de texto */
+.truncated-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /* Limita para 2 linhas */
+  line-clamp: 2; /* Para navegadores compatíveis */
+}
+
+/* Layout responsivo para telas menores */
+@media (max-width: 767px) {
+  .projects-section {
+    display: block;
+    gap: 20px;
+  }
+
+  .project-card {
+    max-width: 100% !important;
+    width: 100%; /* Alinha com a largura completa */
+    margin: 0 auto 20px; /* Margem inferior para espaçamento entre os cards */
+  }
+
+  .hero-section h1 {
+    font-size: 1.8em; /* Ajusta o título para telas menores */
+    text-align: center; /* Centraliza o título no mobile */
+  }
+}
+
+
+
+
+
+
+
 .project-card .imagem {
   width: 100%;
   height: 300px;
@@ -372,7 +449,6 @@ nav ul a:hover::after {
   object-position: top;
   border-bottom: 2px solid #E0E0E0;
 }
-
 .project-card img, 
 .project-card h3, 
 .project-card p, 
@@ -400,8 +476,6 @@ nav ul a:hover::after {
   margin-bottom: 8px;
 }
 
-
-
 @media (max-width: 767px) {
   .projects-section {
     flex-direction: column; /* Muda a direção dos cards para empilhar */
@@ -423,6 +497,7 @@ nav ul a:hover::after {
 }
 
 
+/* ------------------------------------------------------------------------------------ */
 /* CONTATO */
 .contact-section {
   text-align: center;
@@ -436,7 +511,6 @@ nav ul a:hover::after {
   opacity: 1;
   transform: translateY(0); /* Posição final */
 }
-
 
 .contact-section h2 {
   margin-bottom: 10px;
@@ -534,14 +608,12 @@ nav ul a:hover::after {
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-/* Torna as seções invisíveis e deslocadas apenas se o JavaScript estiver ativo */
 body.js-enabled .projects-section,
 body.js-enabled .contact-section {
   opacity: 0;
   transform: translateY(50px);
 }
 
-/* Classe `animate` ativa a animação para tornar visível */
 .projects-section.animate, .contact-section.animate {
   opacity: 1;
   transform: translateY(0);
@@ -618,8 +690,6 @@ body.js-enabled .contact-section {
 /* ------------------------------------------------------------------------------------ */
 /* Estilo do rodapé */
 
-
-/* Estilo do rodapé */
 .footer {
   color: #383838;
   padding: 40px 0;
@@ -630,7 +700,7 @@ body.js-enabled .contact-section {
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap; /* Permite que as colunas quebrem em telas menores */
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -638,24 +708,28 @@ body.js-enabled .contact-section {
 }
 
 .footer-column {
-  flex: 1; /* Cada coluna ocupa a mesma largura */
+  flex: 1; 
   margin: 0 15px;
 }
 
-/* Seção principal - Coluna 1 */
 .footer-column:first-child {
-  flex: 1; /* Garante que a coluna 1 tenha a mesma largura das outras */
-  margin-bottom: 20px; /* Espaço entre a coluna 1 e as outras em dispositivos menores */
+  flex: 1;
+  margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  /* Ajuste de largura em telas maiores */
+@media (max-width: 767px) {
   .footer-content {
-    gap: 40px; /* Ajusta o espaço entre colunas */
+    margin-top: 40px !important;
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    align-items: stretch; /* Faz as colunas ocuparem toda a largura */
+  }
+
+  .footer-column {
+    width: 100%; /* Cada coluna ocupa a largura total */
   }
 }
 
-/* Estilos adicionais */
+
 .about-section {
   display: flex;
   flex-direction: column;
@@ -675,17 +749,15 @@ body.js-enabled .contact-section {
 }
 
 .footer-note {
-  font-size: 14px !important; /* Força o tamanho da fonte */
+  font-size: 14px !important;  
   color: #666 !important;
   max-width: 300px;
-  line-height: 1.5 !important; /* Força o espaçamento entre linhas */
+  line-height: 1.5 !important;  
   overflow-wrap: break-word;
-  margin: 10px 0 0 0 !important; /* Garante que a margem seja 10px no topo e sem margens extras */
-  padding: 0 !important; /* Remove qualquer padding extra */
+  margin: 10px 0 0 0 !important;  
+  padding: 0 !important; 
 }
-
-
-/* Links de rodapé sem decoração */
+ 
 .footer-column ul {
   list-style: none;
   padding: 0;
@@ -693,7 +765,7 @@ body.js-enabled .contact-section {
 
 .footer-column ul li a {
   color: #383838;
-  text-decoration: none; /* Remove a decoração do link */
+  text-decoration: none;  
   line-height: 2.4;
 }
 
@@ -702,10 +774,9 @@ body.js-enabled .contact-section {
 
 }
 
-/* Estilos para os links das redes sociais */
 .social-icons {
   display: flex;
-  gap: 10px; /* Espaço entre os ícones */
+  gap: 16px; /* Espaço entre os ícones */
   margin-bottom: 10px; /* Espaço entre os ícones e a footer-note */
 }
 
@@ -715,11 +786,7 @@ body.js-enabled .contact-section {
 }
 
 
-
-
-
-
-
+/* ------------------------------------------------------------------------------------ */
 /* Estilo do elemento animado */
 
 .hero-section {
@@ -769,7 +836,6 @@ body.js-enabled .contact-section {
   }  
 }
 
-/* Estilos específicos para o segundo elemento */
 .elemento-animado-2 {
   background-color: #383838; 
   animation-fill-mode: forwards; 
@@ -782,8 +848,6 @@ body.js-enabled .contact-section {
 .elemento-animado-2:hover{ 
   animation-play-state: running;
 }
-
-/* LOADING */
 
 .loading {
   height: 50px;
@@ -813,17 +877,19 @@ body.js-enabled .contact-section {
   }
 }
 
+
+/* ------------------------------------------------------------------------------------ */
 /* Breadcrumb */
 .breadcrumb {
   font-size: 14px;
   margin-bottom: 28px;
-  text-align: left; /* Centraliza o breadcrumb */
+  text-align: left;
 }
 
 .breadcrumb a {
   color: #383838;
   text-decoration: none;
-  margin: 0 5px; /* Espaçamento entre os links */
+  margin: 0 5px; 
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -832,15 +898,15 @@ body.js-enabled .contact-section {
 }
 
 .breadcrumb span {
-  color: #383838; /* Cor para o texto não clicável */
+  color: #383838;
   font-weight: 600;
   margin: 0 5px;
   font-family: 'Montserrat', sans-serif;
 }
 
+/* ------------------------------------------------------------------------------------ */
+/* Estrutura da Página de Projeto */
 
-
-/* Estrutura Projeto */
 .project-content {
     max-width: 800px;
     margin: 0 auto;
@@ -945,9 +1011,6 @@ margin-bottom: 30px;
   object-fit: cover;
 }
 
-
-
-
 @media (max-width: 767px) {
 
   .project-content {
@@ -982,9 +1045,6 @@ margin-bottom: 30px;
   }
  
   }
-
-
-/* -------------------------------------------------------------------------------------*/
 
 /* Seção de Personas */
 .personas {
@@ -1051,7 +1111,6 @@ margin-bottom: 30px;
   display: block;
 }
 
-/* -------------------------------------------------------------------------------------*/
 /* jornada */
 .jornada-esg-image {
   display: flex;
@@ -1074,7 +1133,7 @@ margin-bottom: 30px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
-/* -------------------------------------------------------------------------------------*/
+
 /* revisao */
 .revisao-esg-image {
   display: flex;
@@ -1098,7 +1157,6 @@ margin-bottom: 30px;
   padding-bottom: 16px;
 }
 
-/* -------------------------------------------------------------------------------------*/
 /* Design */
 .design-esg-image {
   display: flex;
@@ -1144,3 +1202,7 @@ margin-bottom: 30px;
       animation-delay: 0.5s; 
     }
   }
+
+
+/* ------------------------------------------------------------------------------------ */
+
