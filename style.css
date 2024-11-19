@@ -60,6 +60,14 @@ h4 {
 
 /* ------------------------------------------------------------------------------------ */
 /* Estilo do botão */
+p a {
+  color: #0052cc !important;
+  text-decoration: underline !important;
+
+}
+
+
+
 button {
     background-color: #FFFFFF; 
     border: 2px solid #383838;
@@ -121,10 +129,11 @@ button a:active {
 
 /* Container */
 .container {
-    width: 90%;
-    max-width: 100%;
-    margin: 0 auto;
+  width: 90%; /* Para telas menores, o conteúdo ocupa 90% da largura */
+  max-width: 1200px; /* Limita a largura máxima em telas maiores */
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
 }
+
 
 /* ------------------------------------------------------------------------------------ */
 /* HEADER */
@@ -483,6 +492,7 @@ nav ul a:hover::after {
   border-radius: 16px;
   margin-bottom: 8px;
 }
+
 
 
 /* ------------------------------------------------------------------------------------ */
@@ -909,6 +919,15 @@ body.js-enabled .contact-section {
   margin: 0; /* Remove qualquer margem padrão */
 }
 
+ul { 
+  list-style-type: disc;
+  margin-left: 20px;
+  font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+
 .project-title .tags {
 margin-top: 16px;
 margin-bottom: 30px;
@@ -1060,11 +1079,7 @@ margin-bottom: 30px;
 
 
 
-
-
-
-
-/* ---------------------------------------------------------------------------/*
+/* ---------------------------------------------------------------------------*/
 /* Seção de Personas */
 .personas {
   margin: 0 auto;
@@ -1129,9 +1144,82 @@ margin-bottom: 30px;
 .persona-card.expanded .persona-description {
   display: block;
 }
-/* ---------------------------------------------------------------------------/*
+
+/* ---------------------------------------------------------------- */
+
+.link-card {
+  max-width: 100%; /* Largura máxima do card */
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  overflow: hidden; /* Garante que os elementos fiquem dentro do card */
+  background-color: #fff; /* Fundo branco */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação no hover */
+}
+
+.link-card a {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Garante que as cores do texto sejam herdadas */
+}
+
+.link-card:hover {
+  transform: translateY(-4px); /* Eleva o card no hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifica a sombra no hover */
+}
+
+.card-content {
+  display: flex; /* Layout flexível para alinhar imagem e texto */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 40px;
+  padding: 16px;
+}
+
+.card-text {
+  flex: 1; /* O texto ocupa o espaço restante */
+}
+.card-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 8px; /* Espaçamento inferior */
+}
+
+.card-text p {
+  font-size: 14px;
+  color: #666; /* Cor do texto secundário */
+  margin: 0;
+}
+
+.card-image {
+  width: 200px; /* Largura fixa para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Bordas arredondadas na imagem */
+  object-fit: cover; /* Ajusta o conteúdo para preencher o container */
+}
 
 
+
+.card-text p {
+  font-size: 14px;
+  color: #666; /* Cor do texto secundário */
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .card-content {
+    flex-direction: column; /* Empilha texto e imagem */
+    text-align: center; /* Centraliza o texto */
+    
+  }
+  .card-text p {
+    font-size: 14px;
+    color: #666; /* Cor do texto secundário */
+    padding: 24px !important;
+  }
+  .card-image {
+    width: 200px; /* Largura fixa para a imagem */
+    max-width: none; /* Remove restrição de tamanho */
+  }
+}
 
 
 
