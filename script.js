@@ -37,3 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     header.addEventListener('click', toggleAllDescriptions);
   });
 });
+
+
+
