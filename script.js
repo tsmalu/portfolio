@@ -38,5 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Seleciona o ícone do menu hambúrguer e o menu
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('nav ul');
+
+// Adiciona um evento de clique ao hambúrguer
+hamburger.addEventListener('click', () => {
+  // Alterna a classe 'active' no menu para exibi-lo ou ocultá-lo
+  menu.classList.toggle('active');
+});
 
 
