@@ -370,7 +370,7 @@ nav ul a:hover::after {
 /* Seção de Projetos */
 .projects-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Alinha todos os itens ao lado esquerdo */
   gap: 24px;
   padding: 60px 0;
   flex-wrap: wrap;
@@ -489,7 +489,7 @@ nav ul a:hover::after {
   color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-  padding: 4px 8px;
+  padding: 4px 12px;
   margin-right: 8px;
   border-radius: 16px;
   margin-bottom: 8px;
