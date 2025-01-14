@@ -827,12 +827,13 @@ body.js-enabled .contact-section {
 .social-icons {
   display: flex;
   gap: 16px; /* Espaço entre os ícones */
+  padding-left: 10px;
   margin-bottom: 10px; /* Espaço entre os ícones e a footer-note */
 }
 
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 
 
