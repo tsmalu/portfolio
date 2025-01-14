@@ -494,8 +494,54 @@ nav ul a:hover::after {
   border-radius: 16px;
   margin-bottom: 8px;
 }
+/* --------------- componente de abas ---------------------- */ 
+/* Container de Abas */
+.tabs-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
 
+.tabs {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
 
+.tab {
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.tab.active {
+  background-color: #383838;
+  color: #fff;
+  border-color: #383838;
+}
+
+/* Projetos por Categoria */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projects-tab {
+  display: none;
+  width: 100%; /* Ajuste para ocupar toda a largura */
+}
+
+.projects-tab.active {
+  display: flex; /* Exibe os projetos da aba ativa */
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
 /* ------------------------------------------------------------------------------------ */
 /* CONTATO */

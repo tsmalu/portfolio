@@ -48,4 +48,34 @@ hamburger.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
+// componente de abas 
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+          // Remove a classe "active" de todas as abas
+          tabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          // Pega a categoria da aba clicada
+          const category = tab.getAttribute("data-tab");
+
+          // Mostra ou esconde os projetos com base na categoria
+          projectCards.forEach((card) => {
+              const categories = card.getAttribute("data-category").split(" "); // Divide as categorias do card
+              if (category === "all" || categories.includes(category)) {
+                  card.style.display = "block"; // Exibe o card
+              } else {
+                  card.style.display = "none"; // Esconde o card
+              }
+          });
+      });
+  });
+});
+
+
+
+
 
