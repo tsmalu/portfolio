@@ -465,6 +465,29 @@ padding-bottom: 16px;
 
 
 
+/* Imagens em galeria */
+.project-gallery {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  flex-wrap: wrap; /* Mantém imagens em linha, sem quebrem se forem grandes */
+  max-width: 800px; /* Define um limite de largura */
+  margin: 0 auto; /* Centraliza na página */
+  position: relative;
+}
+
+.project-gallery img {
+  width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+  max-width: 800px; /* Máximo igual ao container */
+  height: auto; /* Mantém proporção */
+  object-fit: cover; /* Evita distorção */
+  margin: 0; /* Remove qualquer espaçamento extra */
+  padding: 0;
+  border: none;
+}
+
+
+
+
 /* Imagem workshop */
 .project-workshop-images {
 display: flex;
