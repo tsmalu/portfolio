@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="css/base.css?v=1">
-    <link rel="stylesheet" href="css/layout.css?v=1">
-    <link rel="stylesheet" href="css/components.css?v=1">
-    <link rel="stylesheet" href="css/sections.css?v=1">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/sections.css">
 </head>
 <body>
 
@@ -96,10 +96,9 @@
 <!-- Imersão -->
 <section class="section-introduction">
     <h2>Imersão</h2> <br>
-    <h3>Análise dos concorrentes</h3> <br>
-    <p>Há diversos sites e aplicativos que transporte no mercado, revisar esses produtos me ajudou a entender as estratégias que eles aplicam.</p>
 
-    <!-- Novo container para alinhar os h5 -->
+    <h3>Análise dos concorrentes</h3> 
+    <p>Há diversos sites e aplicativos que transporte no mercado, revisar esses produtos me ajudou a entender as estratégias que eles aplicam.</p>
     <div class="competitors">
         <div class="competitor">
             <h5>Concorrentes diretos</h5>
@@ -121,6 +120,96 @@
             </ul>
         </div>
     </div>
+
+    <h3>Análise da interface</h3>
+    <p>Analisei tela por tela do aplicativo, para entender as funcionalidades, arquitetura, navegação e identificar pontos problemáticos e/ou de melhoria.</p>
+    
+    <!-- Imagem -->
+    <section class="project-image"> 
+        <img src="../imgs/APP para passageiros | 2021/analise-interface.png" alt="Prints da interface do aplicativo"> 
+    </section>
+
+    <h5>Página inicial</h5>
+    <p>A primeira tela é muito simples, há apenas um texto e dois botões, quando baixamos um aplicativo novo, esperamos entender um pouco melhor sobre ele, ou até mesmo relembrar para que serve e porque o baixamos. </p>
+    <h5>Resultado de busca</h5>
+    <p>Olhando rapidamente, parece que todas as opções são iguais, é possível melhorar visualmente, organizar os dados nesta, remover o que se repete e trazer mais informações sobre a linha, para que o usuário consiga diferenciar melhor as linhas para compará-las e então ver mais detalhes.</p>
+    <h5>Detalhes da linha</h5>
+    <p>É uma página longa, as informações podem ser organizadas e divididas, assim será possível dar destaque para as informações mais importantes.</p>
+
+    <!-- Ideação -->
+    <section class="section-introduction">
+        <br> 
+    <h2>Ideação</h2>
+    <p>Depois de entender o problema e analisar cada ponto problemático. Eu estava pronta para encontrar soluções.</p>
+
+    <h3>Fluxo do Usuário</h3> 
+    <p>Criei um fluxo sobre como os usuários vão navegar no novo app.</p>
+
+     <section class="project-image"> 
+        <img src="../imgs/APP para passageiros | 2021/passageiros-fluxo.png" alt="Fluxo de navegação para o aplicativo"> 
+    </section>
+
+    <h3>Esboços</h3> 
+    <p>Comecei a desenhar as telas principais do app para ter uma ideia das informações que teria cada uma.</p>
+
+     <section class="project-image"> 
+        <img src="../imgs/APP para passageiros | 2021/passageiros-rascunhos.png" alt="Rascunhos das telas"> 
+    </section>
+
+    <h3>Refinamento</h3> 
+    <p>Depois de alguns rascunhos queria explorar mais e comecei a desenhar no Adobe XD, comecei com layouts sem cores. </p>
+
+     <section class="project-image"> 
+        <img src="../imgs/APP para passageiros | 2021/passageiros-refinamento.png" alt="Telas com UI refinada"> 
+    </section>
+
+    <!-- Prototipagem e teste de usabilidade -->
+    <section class="section-introduction">
+        <br> 
+    <h2>Prototipagem e teste de usabilidade</h2>
+    <p>Após alguns sketchs, fiz a primeira versão do protótipo, já com elementos da nova identidade visual, adicionando mais informações a página de busca e separando melhor o conteúdo da página de detalhes da linha.</p>
+    <h3>Testes internos</h3>
+    <p>Realizei alguns testes de usabilidade internos, com funcionários da empresa, antigos e recém chegados, foi uma etapa crucial para validar minhas ideias e detectar erros antes de testar com usuários reais.
+Alguns aprendizados e decisões de design que apliquei: 
+    </p>
+    <ul>
+        <li>Os horários são informações muito importantes e devem ser evidenciados</li>
+        <li>O tempo de caminhada estava confuso </li>
+        <li>Normalmente a viagem de ida e volta é feita pela mesma linha de fretado, então a divisão entre “ida” e “volta” no fluxo é uma coisa nova e não foi bem aceita entre os participantes. Decidi esperar e ver se mais usuários teriam essa percepção antes de remover a funcionalidade. </li>
+    </ul>
+
+    <h3>Testes externos</h3>
+    <p>Optei por testes presenciais e para que os participantes não tivessem que se deslocar de grandes distâncias, selecionei pessoas que estavam buscando por linhas que embarcavam ou desembarcavam no bairro da Barra Funda, que é onde está localizado o escritório do Fretadão, além de pessoas que estavam buscando por linhas, também recrutei quem havia feito uma viagem de teste recentemente. </p>
+    <p>Seis usuários foram convidados para conhecer nosso escritório e participar da pesquisa. O teste tinha como objetivo identificar erros e verificar a compreensão dos usuários em relação às informações e funções do novo aplicativo. </p>
+    <p>Foram realizadas testes de usabilidade em protótipos Android, com duração média de 20 minutos, observando aspectos de usabilidade e entendimento das funcionalidades.</p>
+    <div class="competitors">
+        <div class="competitor">
+            <h5>Cenário</h5>
+            <p>Imagine que você mora no bairro Barra Funda e vai começar a trabalhar em uma empresa em Campinas, com horário de entrada às 8h e saída às 17h. </p>
+        </div>
+
+        <div class="competitor">
+            <h5>Tarefa</h5>
+            <p>Encontre um fretado que melhor te atenda nessas condições.
+                Nenhum usuário teve dificuldade em realizar a tarefa e os feedbacks foram muito importantes para adicionar informações, sanar dúvidas e fazer ajustes na interface.
+                </p>
+        </div>
+    </div>
+<!-- Iterações e design final -->
+<section class="section-introduction">
+    <br> 
+<h2>Iterações e design final</h2>
+<p>Depois de passar por várias iterações cheguei no design final, essas são as principais mudanças​​​​​​​
+</p>
+<section class="project-image"> 
+    <img src="../imgs/APP para passageiros | 2021/passageiros-pagina-inicial.gif" alt=" Gif da home do aplicativo">  
+</section>
+<section class="project-image"> 
+    <img src="../imgs/APP para passageiros | 2021/passageiros-pagina-filtros.gif" alt=" Gif dos filtros do aplicativo">  
+</section>
+
+
+
 </section>
 
 
