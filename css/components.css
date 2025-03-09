@@ -1,0 +1,669 @@
+/* Estilo do botão */
+p a {
+  color: #0052cc !important;
+  text-decoration: underline !important;
+
+}
+
+
+
+button {
+    background-color: #FFFFFF; 
+    border: 2px solid #383838;
+    border-radius: 6px;
+    border-style: solid; 
+    color: #383838; 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold; 
+    font-size: 16px; 
+    padding: 10px 24px; 
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* Animação para a sombra */
+  }
+  
+  button:hover {
+    box-shadow: 4px 4px rgba(56, 56, 56, 1); /* Sombra no hover */
+  }
+
+button a {
+  color: inherit; /* Herdar a cor do botão (garante que não use a cor padrão do link) */
+  text-decoration: none; /* Remove sublinhado */
+  display: block; /* Garante que o link ocupe o espaço do botão */
+  width: 100%; /* O link ocupa toda a largura do botão */
+  height: 100%; /* O link ocupa toda a altura do botão */
+}
+
+button a:link,
+button a:visited,
+button a:hover,
+button a:active {
+  color: inherit; /* Mantém a cor do link herdada do botão */
+  text-decoration: none; /* Remove sublinhado em todas as variantes */
+}
+
+/* Estilo específico para o botão da página de projetos */
+.project-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 30px; /* Borda arredondada para o botão */
+}
+
+.project-button:hover {
+  box-shadow: 4px 4px rgba(56, 56, 56, 1);
+}
+
+/* Ícone de seta dentro do botão */
+.project-button .arrow-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #383838; /* Fundo do ícone de seta */
+  border-radius: 50%;
+  padding: 8px; /* Espaço interno ao redor do ícone */
+  margin-left: 12px;
+}
+/* ------------------------------------------------------------------------------------ */
+/* HEADER */
+header {
+  position: relative; /* Define o header como referência para o posicionamento absoluto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.logo {
+  font-family: 'MangoGrotesque', sans-serif;
+  font-size: 60px;
+  font-weight: 200;
+  color: #383838;
+}
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+/* MENU */
+
+nav ul {
+  display: flex; /* Exibe os itens do menu lado a lado */
+  list-style: none; /* Remove as bolinhas */
+  padding: 0;
+  margin: 0;
+  gap: 20px; 
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul a {
+  position: relative;
+  text-decoration: none;  
+  color: #383838;
+  padding: 10px 20px; 
+  font-size: 16px; 
+  font-family: 'Montserrat', sans-serif; 
+  transition: color 0.3s ease;
+}
+
+nav ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Começa com largura zero */
+  height: 2px;
+  background-color: #383838; /* Cor da linha */
+  transition: width 0.3s ease-in-out; /* Animação da largura */
+}
+
+nav ul a:hover::after {
+  width: 100%; /* Expande a linha para a largura total do link */
+}
+
+
+.hamburger {
+  display: none; /* Oculta o ícone de hambúrguer por padrão */
+  cursor: pointer;
+  font-size: 40px; /* Ajusta o tamanho do ícone do hambúrguer */
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 40px 0px 40px;
+  }
+
+  nav ul {
+    display: none; /* Esconde o menu em telas menores por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 10px); /* Posiciona o menu logo abaixo do header */
+    right: 0;
+    width: 100%; /* O menu ocupa toda a largura da tela */
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 10; /* Garante que o menu fique acima de outros elementos */
+  }
+
+  nav ul.active {
+    display: flex; /* Exibe o menu ao clicar no menu hambúrguer */
+  }
+
+  .hamburger {
+    display: block; /* Mostra o ícone de hambúrguer em telas pequenas */
+  }
+
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* CARD */
+
+.project-card {
+  display: block;
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards por linha */
+  max-width: calc(33.333% - 20px);
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px; /* Espaçamento entre as linhas de cards */
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:link,
+.project-card:visited,
+.project-card:hover,
+.project-card:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Truncamento de texto para cards */
+.truncated-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /* Limita para 2 linhas */
+  line-clamp: 2; /* Para navegadores compatíveis */
+}
+
+/* Layout responsivo */
+@media (max-width: 1024px) {
+  .project-card {
+    flex: 1 1 50%; /* Em telas médias, 2 cards por linha */
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-section {
+    display: block; /* Empilha os cards em telas menores */
+    gap: 20px;
+  }
+
+  .project-card {
+    flex: 1 1 100%; /* Em telas pequenas, 1 card por linha */
+    max-width: 100%;
+    margin: 0 auto 20px; /* Margem inferior para espaçamento entre os cards */
+  }
+}
+
+/* Estilos de Imagem e Conteúdo do Card */
+.project-card .imagem {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-card .imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 2px solid #E0E0E0;
+}
+
+
+.project-card h3 {
+  margin: 10px 0; /* Margem superior e inferior */
+  line-height: 1.3; /* Ajuste da altura da linha */
+  margin-bottom: 16px;
+}
+  
+
+.project-card .tags {
+  pointer-events: none;
+}
+
+.conteudo {
+  padding: 20px;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+/* TAG */
+
+.tags {
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #383838;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  padding: 4px 12px;
+  margin-right: 8px;
+  border-radius: 16px;
+  margin-bottom: 8px;
+}
+/* --------------- componente de abas ---------------------- */ 
+/* Container de Abas */
+.tabs-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.tab {
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.tab.active {
+  background-color: #383838;
+  color: #fff;
+  border-color: #383838;
+}
+
+/* Projetos por Categoria */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projects-tab {
+  display: none;
+  width: 100%; /* Ajuste para ocupar toda a largura */
+}
+
+.projects-tab.active {
+  display: flex; /* Exibe os projetos da aba ativa */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.breadcrumb a {
+  color: #383838;
+  text-decoration: none;
+  margin: 0 5px; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #383838;
+  font-weight: 600;
+  margin: 0 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Estrutura da Página de Projeto */
+
+.project-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.section p {
+font-size: 1rem;
+line-height: 1.8;
+margin: 0; /* Remove qualquer margem padrão */
+}
+
+ul { 
+list-style-type: disc;
+margin-left: 20px;
+font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.project-title .tags {
+margin-top: 16px;
+margin-bottom: 30px;
+}
+.project-content p {
+max-width: 100%; /* Garante que o parágrafo ocupe toda a largura do contêiner */
+}
+
+/* Componente de post */
+.author-info {
+display: flex;
+align-items: center;
+font-family: Montserrat, sans-serif;
+color: #333;
+font-size: 14px;
+margin: 0;
+margin-bottom: 60px;
+}
+
+.author-avatar {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.author-name {
+font-weight: bold;
+color: #333;
+display: flex;
+align-items: center;
+}
+
+.follow {
+font-weight: normal;
+color: #888;
+margin-left: 5px;
+}
+
+.publication-details {
+color: #888;
+margin-top: 4px;
+}
+
+.publication-name {
+font-weight: bold;
+color: #333;
+}
+/* ---------------------------------------------------------------------------/*
+/* ------------------------------------------------------------------------------------ */
+
+/* Imagem para projeto */
+/* Container para a imagem do projeto */
+.project-image {
+display: flex;
+justify-content: center; /* Centraliza a imagem horizontalmente */
+max-width: 800px; /* Define a mesma largura máxima da .project-content */
+margin: 0 auto; /* Centraliza o contêiner na página */
+padding-bottom: 36px;
+position: relative;
+opacity: 0; /* Oculto no início */
+transform: translateY(50px); /* Começa deslocado para baixo */
+animation: slideUp 1.5s ease-out forwards;
+animation-delay: 1.2s;
+}
+
+.project-image img {
+width: 100%; /* A imagem ocupa toda a largura do contêiner */
+object-fit: cover;
+padding-top: 16px;
+padding-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+.project-image {
+  width: 100vw; /* Faz a imagem ocupar a largura inteira da tela */
+  margin-left: calc(50% - 50vw); /* Centraliza o contêiner da imagem */
+}
+
+.project-image img {
+  max-width: 100%; /* A imagem ocupa toda a largura disponível */
+}
+}
+
+
+
+/* Imagem workshop */
+.project-workshop-images {
+display: flex;
+gap: 16px; /* Espaço entre as imagens */
+width: 100vw; /* Ocupa toda a largura da janela de visualização */
+margin-left: calc(50% - 50vw); /* Centraliza as imagens na página */
+position: relative; /* Para evitar deslocamento inesperado */
+padding-bottom: 36px;
+opacity: 0; /* Oculto no início */
+transform: translateY(50px); /* Começa deslocado para baixo */
+animation: slideUp 1.5s ease-out forwards;
+animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
+}
+
+.project-workshop-images img {
+width: 100%; /* Cada imagem ocupa metade do contêiner */
+max-width: 50%; /* Cada imagem ocupa 50% do contêiner */
+object-fit: cover;
+}
+
+@media (max-width: 767px) {
+
+.project-content {
+  padding: 0px 40px; 
+}
+
+.project-content h2 {
+  font-size: 54px;
+margin: 0; /* Remove qualquer margem padrão */
+}
+.section-introduction img {    
+  max-width: 100%; /* A primeira imagem ocupa 100% da largura */
+  opacity: 0; /* Oculto no início */
+  animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+  animation-delay: 0.5s; 
+}
+
+.project-workshop-images img:nth-child(2) {
+  display: none; /* Oculta a segunda imagem */
+}
+
+.project-workshop-images img:nth-child(1) {
+  max-width: 100%; /* A primeira imagem ocupa 100% da largura */
+}
+
+.project-workshop-images { 
+      width: 100vw; /* Faz a imagem ocupar a largura inteira da tela */
+      margin-left: calc(50% - 50vw); /* Centraliza o contêiner da imagem */
+    }
+  
+    .project-workshop-images img {
+      max-width: 100%; /* A imagem ocupa toda a largura disponível */
+    }
+  }
+  
+.project-image img {
+  max-width: 100% !important;
+  opacity: 0; /* Oculto no início */
+  animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+  animation-delay: 0.5s; 
+}
+
+/* ---------------------------------------------------------------------------*/
+/* Seção de Personas */
+.personas {
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  flex-wrap: wrap; /* Permite que os cartões quebrem linha em telas menores */
+}
+
+.personas-title {
+  width: 100%; /* Garante que o título ocupe toda a largura */
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.persona-card {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 16px;
+  flex: 1 1 calc(33.333% - 16px); /* Cada cartão ocupa aproximadamente 1/3 do contêiner */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px; /* Tamanho mínimo para cada cartão */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.persona-card.expanded {
+  background-color: #e0e0e0; /* Cor de fundo do cartão expandido */
+}
+
+.persona-header {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o ícone e o título */
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  text-align: left; /* Alinha o conteúdo à esquerda */
+}
+
+.toggle-icon {
+  font-size: 16px;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.persona-header p {
+  margin: 0;
+  display: inline;
+}
+
+.persona-description {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+  display: none; /* Esconde a descrição inicialmente */
+}
+
+.persona-card.expanded .persona-description {
+  display: block;
+}
+
+/* ---------------------------------------------------------------- */
+
+.link-card {
+  max-width: 100%; /* Largura máxima do card */
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  overflow: hidden; /* Garante que os elementos fiquem dentro do card */
+  background-color: #fff; /* Fundo branco */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação no hover */
+}
+
+.link-card a {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Garante que as cores do texto sejam herdadas */
+}
+
+.link-card:hover {
+  transform: translateY(-4px); /* Eleva o card no hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifica a sombra no hover */
+}
+
+.card-content {
+  display: flex; /* Layout flexível para alinhar imagem e texto */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 40px;
+  padding: 16px;
+}
+
+.card-text {
+  flex: 1; /* O texto ocupa o espaço restante */
+}
+.card-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 8px; /* Espaçamento inferior */
+}
+
+.card-text p {
+  font-size: 14px;
+  color: #666; /* Cor do texto secundário */
+  margin: 0;
+}
+
+.card-image {
+  width: 200px; /* Largura fixa para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Bordas arredondadas na imagem */
+  object-fit: cover; /* Ajusta o conteúdo para preencher o container */
+}
+
+
+
+.card-text p {
+  font-size: 14px;
+  color: #666; /* Cor do texto secundário */
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .card-content {
+    flex-direction: column; /* Empilha texto e imagem */
+    text-align: center; /* Centraliza o texto */
+    
+  }
+  .card-text p {
+    font-size: 14px;
+    color: #666; /* Cor do texto secundário */
+    padding: 24px !important;
+  }
+  .card-image {
+    width: 200px; /* Largura fixa para a imagem */
+    max-width: none; /* Remove restrição de tamanho */
+  }
+}

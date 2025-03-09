@@ -1,0 +1,529 @@
+/* ------------------------------------------------------------------------------------ */
+/* HERO SECTION */
+.hero-section {
+  text-align: center;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.hero-section h1 {
+display: block;
+text-align: center;
+opacity: 0; /* Oculto no início */
+transform: translateY(50px); /* Começa deslocado para baixo */
+animation: slideUp 1s ease-out forwards; /* Aplica a animação */
+margin: 0 auto; 
+}
+
+.hero-section p {
+opacity: 0; /* Oculto no início */
+animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+animation-delay: 0.5s; 
+}
+
+.hero-section button {
+opacity: 0;
+transform: translateY(40px); /* Começa deslocado para baixo */
+animation: slideUp 1s ease-out forwards;
+animation-delay: 1s; /* Adiciona atraso para o botão aparecer depois do parágrafo */
+}
+@media (max-width: 767px) {
+.hero-section {
+ padding: 0px 24px;
+ flex-direction: column; /* Alinha os itens um em cima do outro */
+  text-align: center; 
+  padding: 0;
+}
+.hero-section h1 {
+    font-size: 72px !important;
+}
+
+}
+
+
+@keyframes slideUp {
+0% {
+  opacity: 0;
+  transform: translateY(20px); /* Posição inicial (abaixo) */
+}
+100% {
+  opacity: 1;
+  transform: translateY(0); /* Posição final (no lugar) */
+}
+}
+
+@keyframes fadeIn {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* PROJETO EM DESTAQUE */
+
+.project-highlight {
+display: flex; /* Layout flexível para alinhar horizontalmente */
+justify-content: space-between; /* Distribui os itens */
+align-items: center; /* Alinha ao centro verticalmente */
+gap: 40px; /* Espaçamento entre texto e imagem */
+padding: 60px 0; /* Espaçamento interno */
+opacity: 0; /* Oculto no início */
+transform: translateY(50px); /* Começa deslocado para baixo */
+animation: slideUp 1.5s ease-out forwards;
+animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
+}
+
+.project-highlight-text {
+flex: 1;
+}
+
+.project-highlight-img {
+flex: 1;
+display: flex;
+justify-content: center;
+}
+
+.project-highlight-img img {
+max-width: 100%; /* Ajusta para responsivo */
+height: auto; /* Mantém a proporção */
+border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+.project-highlight {
+  flex-direction: column; /* Alinha os itens um em cima do outro */
+  text-align: center; 
+  padding: 0;
+}
+
+.project-highlight-img {
+  order: 1; /* Coloca a imagem primeiro */
+  margin-bottom: 20px;
+}
+
+.project-highlight-text {
+  order: 2; /* Coloca o texto depois da imagem */
+}
+
+.project-highlight-text a {
+  margin-top: 20px; /* Espaçamento entre o texto e o botão */
+}
+
+.project-highlight-text button {
+  width: auto; /* Permite que o botão ajuste sua largura automaticamente */
+}
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Seção de Projetos */
+.projects-section {
+  display: flex;
+  justify-content: flex-start; /* Alinha todos os itens ao lado esquerdo */
+  gap: 24px;
+  padding: 60px 0;
+  flex-wrap: wrap;
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.projects-section.animate {
+  opacity: 1;
+  transform: translateY(0); /* Posição final */
+}
+
+.project-button-container {
+  width: 100%; /* O botão ocupa toda a largura da seção */
+  display: flex;
+  justify-content: center; /* Centraliza o botão horizontalmente */
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* CONTATO */
+.contact-section {
+  text-align: center;
+  padding: 80px 0;
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.contact-section.animate {
+  opacity: 1;
+  transform: translateY(0); /* Posição final */
+}
+
+.contact-section h2 {
+  margin-bottom: 10px;
+  color: #333; /* Ajuste a cor para melhor contraste */
+}
+
+.contact-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center !important;
+  color: #666;
+  max-width: 600px; /* Limita a largura para centralização */
+  margin: 0 auto 20px; /* Centraliza e adiciona espaçamento inferior */
+}
+
+
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left; /* Alinha o conteúdo do formulário à esquerda */
+  display: flex; /* Flexbox para centralizar o botão */
+  flex-direction: column; /* Coloca os elementos em uma coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.contact-section label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #333; /* Ajuste da cor do texto da label */
+  margin-bottom: 5px;
+}
+
+.contact-section input, .contact-section textarea {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #BCBBBB;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-section button {
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.contact-section button:hover {
+  background-color: #555;
+}
+
+.message-box {
+  width: 600px; /* Define a largura fixa */
+  max-width: 90%; /* Garante que a largura se ajuste em telas menores */
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  padding: 16px;
+  margin: 20px auto; /* Centraliza horizontalmente */
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.success-message {
+  color: #333;
+}
+
+.error-message {
+  color: #a6231e; /* Cor de erro (vermelha) */
+}
+
+
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .contact-section {
+      padding: 0px 24px;
+  }
+  .contact-section h2 {
+      font-size: 72px;
+  }
+}
+
+/* Padrão para as seções, visíveis até o JS carregar */
+.projects-section, .contact-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+body.js-enabled .projects-section,
+body.js-enabled .contact-section {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.projects-section.animate, .contact-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* ------------------------------------------------------------------------------------ */
+/* ------------------------ Estilo da página sobre ------------------------ */
+
+.perfil-section {
+  display: flex; /* Cria um layout em colunas */
+  align-items: center; /* Alinha os itens ao topo */
+  justify-content: space-between; /* Distribui os itens */
+  gap: 40px; /* Espaçamento entre as colunas */
+  padding: 60px 20px;
+  margin: 0 auto; /* Centraliza a seção */
+  max-width: 1200px; /* Limita a largura máxima da seção */
+  color: 383838;
+  text-align: left;
+  padding: 50px 100px;
+
+  }
+  
+  .perfil-section h1 {
+    opacity: 0; /* Oculto no início */
+    transform: translateY(50px); /* Começa deslocado para baixo */
+    animation: slideUp 1s ease-out forwards; /* Aplica a animação */
+  }
+
+  .perfil-section p {
+    opacity: 0; /* Oculto no início */
+    transform: translateY(50px); /* Começa deslocado para baixo */
+    animation: slideUp 1s ease-out forwards; /* Aplica a animação */
+  }
+
+  /* Classe que ativa a animação */
+  .perfil-section.animate {
+    opacity: 1;
+    transform: translateY(0); /* Posição final */
+  }
+
+.perfil-section-foto {
+  display: flex;
+  flex-direction: column; /* Organiza <h1> e a imagem na vertical */
+  align-items: center;
+}
+
+.perfil-section-foto img {
+  height: 300px; /* Define uma altura fixa */
+  width: auto; /* Mantém a largura proporcional à altura */
+  border-radius: 50%; /* Faz a imagem ficar circular */
+  object-fit: cover; /* Corta a imagem para se ajustar ao container */
+    opacity: 0; /* Oculto no início */
+    animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+    animation-delay: 0.5s; 
+  }
+
+@media (max-width: 767px) {
+  .perfil-section {
+    flex-direction: column; /* Muda a direção dos cards para empilhar */
+    gap: 20px; /* Reduz o espaçamento entre os cards */
+    padding: 0px 40px; 
+  }
+  .perfil-section h1 {
+    font-size: 72px;
+    padding-top: 24px;
+  }
+  .perfil-section p {
+    padding-bottom: 24px;
+  }
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Estilo do rodapé */
+
+.footer {
+  color: #383838;
+  padding: 40px 0;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1; 
+  margin: 0 15px;
+}
+
+.footer-column:first-child {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    margin-top: 40px !important;
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    align-items: stretch; /* Faz as colunas ocuparem toda a largura */
+  }
+
+  .footer-column {
+    width: 100%; /* Cada coluna ocupa a largura total */
+  }
+}
+
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  line-height: normal;
+}
+
+.footer-note {
+  color: #666;
+  margin: 0 auto 0;
+}
+
+.footer-note {
+  font-size: 14px !important;  
+  color: #666 !important;
+  max-width: 300px;
+  line-height: 1.5 !important;  
+  overflow-wrap: break-word;
+  margin: 10px 0 0 0 !important;  
+  padding: 0 !important; 
+}
+ 
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li a {
+  color: #383838;
+  text-decoration: none;  
+  line-height: 2.4;
+}
+
+.footer-column ul li a:hover {
+  font-weight: 800;
+
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px; /* Espaço entre os ícones */
+  padding-left: 10px;
+  margin-bottom: 10px; /* Espaço entre os ícones e a footer-note */
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+/* Estilo do elemento animado */
+
+.hero-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.animações {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  padding: 100px 0 300px;
+  align-items: center;
+}
+
+.elemento-animado {
+  width: 200px;
+  height: 200px;
+  background-color: #0052cc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+
+  animation-duration: 3s;
+  animation-name: spin;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes spin { 
+  0% {
+  }
+  50% {
+    scale: 1.5;
+    transform: rotate(0);
+    border-radius: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 50%;
+    scale: 1.5;
+  }  
+}
+
+.elemento-animado-2 {
+  background-color: #383838; 
+  animation-fill-mode: forwards; 
+  animation-duration: 3s;
+  animation-name: spin;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal; 
+  animation-play-state: paused;
+}
+.elemento-animado-2:hover{ 
+  animation-play-state: running;
+}
+
+.loading {
+  height: 50px;
+  width: 50px;
+  border: 6px solid rgb(139, 49, 230);
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgb(139, 49, 230), 0 0 8px rgb(139, 49, 230) inset;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 10;
+  animation: 2s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  33% {
+    transform: rotateX(180deg) rotateY(0) rotateZ(0);
+  }
+  67% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+  }
+}
