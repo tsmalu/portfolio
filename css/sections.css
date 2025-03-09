@@ -125,7 +125,7 @@ border-radius: 8px;
   display: flex;
   justify-content: flex-start; /* Alinha todos os itens ao lado esquerdo */
   gap: 24px;
-  padding: 60px 0;
+  padding: 60px 0 0 0px;
   flex-wrap: wrap;
   opacity: 0; /* Oculto no início */
   transform: translateY(50px); /* Começa deslocado para baixo */
@@ -142,6 +142,20 @@ border-radius: 8px;
   display: flex;
   justify-content: center; /* Centraliza o botão horizontalmente */
 }
+
+.link-projetos {
+  text-align: center;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+
+
+
+
 
 /* ------------------------------------------------------------------------------------ */
 /* CONTATO */
