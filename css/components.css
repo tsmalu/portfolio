@@ -247,6 +247,21 @@ nav ul a:hover::after {
   border-bottom: 2px solid #E0E0E0;
 }
 
+.project-card .imagem.centralizada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do card */
+}
+
+.project-card .imagem.centralizada img {
+  object-fit: cover; /* Mantém a imagem preenchendo o espaço */
+  object-position: center; /* Centraliza a imagem */
+  width: 105%; /* Aumenta ligeiramente a imagem */
+  height: 105%; /* Aumenta ligeiramente a imagem */
+  transform: scale(1.1); /* Aproxima a imagem sem cortar demais */
+}
+
 
 .project-card h3 {
   margin: 10px 0; /* Margem superior e inferior */
