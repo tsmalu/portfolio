@@ -74,13 +74,6 @@ header {
   padding: 20px 100px;
 }
 
-.logo {
-  display: block;
-  width: 150px; /* Ajuste para o tamanho correto */
-  height: auto;
-}
-
-
 .logo a {
   color: inherit;
   text-decoration: none;
@@ -92,6 +85,33 @@ header {
 a:link, a:visited, a:hover, a:active {
   color: inherit;
   text-decoration: none;
+}
+.logo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 📱 Ajuste o tamanho do logo para telas menores */
+@media (max-width: 600px) {
+  .logo {
+    width: 100px; /* Ajuste o tamanho do logo no celular */
+  }
+}
+
+/* 💻 Ajuste para telas médias */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .logo {
+    width: 100px; /* Ajuste o tamanho do logo para tablets */
+  }
+}
+
+/* 🖥️ Ajuste para telas grandes */
+@media (min-width: 1025px) {
+  .logo {
+    width: 100px; /* Ajuste para desktops */
+  }
 }
 
 
