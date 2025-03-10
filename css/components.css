@@ -75,11 +75,11 @@ header {
 }
 
 .logo {
-  font-family: 'MangoGrotesque','Montserrat', sans-serif;
-  font-size: 60px;
-  font-weight: 200;
-  color: #383838;
+  display: block;
+  width: 40px; /* Ajuste para o tamanho correto */
+  height: auto;
 }
+
 
 .logo a {
   color: inherit;
