@@ -2,13 +2,18 @@
 /* ------------------------------------------------------------------------------------ */
 /* HEADER */
 header {
-    position: relative; /* Define o header como referência para o posicionamento absoluto */
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
   }
-  
+
+
+
+
+
+/* LOGO */
   .logo a {
     color: inherit;
     text-decoration: none;
@@ -28,34 +33,25 @@ header {
     height: auto;
   }
   
-  /* 📱 Ajuste o tamanho do logo para telas menores */
   @media (max-width: 600px) {
     .logo {
-      width: 100px; /* Ajuste o tamanho do logo no celular */
-    }
-  }
-  
-  /* 💻 Ajuste para telas médias */
+      width: 100px;
+    }}
   @media (min-width: 601px) and (max-width: 1024px) {
     .logo {
-      width: 100px; /* Ajuste o tamanho do logo para tablets */
-    }
-  }
+      width: 100px; 
+    }}
   
-  /* 🖥️ Ajuste para telas grandes */
   @media (min-width: 1025px) {
     .logo {
-      width: 100px; /* Ajuste para desktops */
-    }
-  }
+      width: 100px;
+    }}
   
-  
-  /* ------------------------------------------------------------------------------------ */
   /* MENU */
   
   nav ul {
-    display: flex; /* Exibe os itens do menu lado a lado */
-    list-style: none; /* Remove as bolinhas */
+    display: flex;
+    list-style: none;
     padding: 0;
     margin: 0;
     gap: 20px; 
@@ -64,7 +60,8 @@ header {
   nav ul li {
     display: inline-block;
   }
-  
+
+
   nav ul a {
     position: relative;
     text-decoration: none;  
@@ -80,21 +77,21 @@ header {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0; /* Começa com largura zero */
+    width: 0; 
     height: 2px;
-    background-color: #383838; /* Cor da linha */
-    transition: width 0.3s ease-in-out; /* Animação da largura */
+    background-color: #383838; 
+    transition: width 0.3s ease-in-out; 
   }
   
   nav ul a:hover::after {
-    width: 100%; /* Expande a linha para a largura total do link */
+    width: 100%;
   }
   
   
   .hamburger {
     display: none; /* Oculta o ícone de hambúrguer por padrão */
     cursor: pointer;
-    font-size: 40px; /* Ajusta o tamanho do ícone do hambúrguer */
+    font-size: 40px;
     color: #000;
   }
   
@@ -107,9 +104,9 @@ header {
       display: none; /* Esconde o menu em telas menores por padrão */
       flex-direction: column;
       position: absolute;
-      top: calc(100% + 10px); /* Posiciona o menu logo abaixo do header */
+      top: calc(100% + 10px);
       right: 0;
-      width: 100%; /* O menu ocupa toda a largura da tela */
+      width: 100%; 
       background-color: #f9f9f9;
       padding: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
@@ -125,4 +122,24 @@ header {
     }
   
   }
+  @media (max-width: 768px) {
+    header {
+      padding: 20px 40px 0px 40px;
+    }
   
+    nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      width: 100%;
+      background-color: #f9f9f9;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  }
