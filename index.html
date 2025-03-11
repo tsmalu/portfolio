@@ -10,8 +10,9 @@
 
         <link rel="icon" type="image/png" href="https://img.icons8.com/fluency-systems-filled/48/null/new-moon.png"/>
 
-        <link rel="preload" href="imgs/global/logo-malu-400w.png" as="image" media="(max-width: 600px)">
-        <link rel="preload" href="imgs/global/logo-malu-800w.png" as="image" media="(min-width: 601px)">
+        <!--preload-->
+        <link rel="preload" href="https://maludesign.com.br/imgs/global/logo-malu-400w.png" as="image" media="(max-width: 600px)">
+        <link rel="preload" href="https://maludesign.com.br/imgs/global/logo-malu-800w.png" as="image" media="(min-width: 601px)">
 
 
         <!-- Fonte Montserrat -->
@@ -51,13 +52,11 @@
     <header>
 
         <a href="index.html">
-            <img 
-  src="imgs/global/logo-malu-optimized.png" 
-  srcset="imgs/global/logo-malu-400w.png 400w, imgs/global/logo-malu-800w.png 800w, imgs/global/logo-malu-optimized.png 1000w"
-  sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1000px"
-  alt="Logo Malu" class="logo">
-
-        </a>
+            <picture>
+                <source srcset="imgs/global/logo-malu-800w.webp" type="image/webp">
+                <img src="imgs/global/logo-malu-800w.png" alt="Logo Malu" class="logo">
+            </picture>
+            
 
     <!-- Menu -->
         <nav>
