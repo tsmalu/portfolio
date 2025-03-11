@@ -403,7 +403,7 @@ body.js-enabled .contact-section {
 .logo-socials {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 0;
   line-height: normal;
 }
 

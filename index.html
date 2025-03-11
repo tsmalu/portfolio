@@ -49,27 +49,7 @@
     </head>
     <body>
      <!-- Header -->
-    <header>
-
-        <a href="index.html">
-            <picture>
-                <source srcset="imgs/global/logo-malu-800w.webp" type="image/webp">
-                <img src="imgs/global/logo-malu-800w.png" alt="Logo Malu" class="logo">
-            </picture>
-            
-
-    <!-- Menu -->
-        <nav>
-            <ul class="menu">
-                <li><a href="pages/projetos.html">projetos</a></li>
-                <li><a href="#contato">contato</a></li>
-                <li><a href="pages/sobre.html">sobre</a></li>
-            </ul>
-        </nav>
-    <div class="hamburger">
-        &#9776;
-    </div>
-    </header>
+     <div data-include="components/header.html"></div>
 
      <!-- hero section -->
     <section class="hero-section">
@@ -214,7 +194,11 @@ Inclui telas como menu principal, seleção de modos de jogo, área social, loja
         <div class="footer-column">
             <div class="about-section">
                 <div class="logo-socials">
-                    <div class="logo">MALU</div>
+                    <div class="logo">
+                        <a href="index.html">
+                                <source srcset="imgs/global/logo-malu-800w.webp" type="image/webp">
+                                <img src="imgs/global/logo-malu-800w.png" alt="Logo Malu" class="logo">
+                    </div>
                     <div class="social-icons">
                         <a href="https://github.com/tsmalu" target="_blank">
                             <img src="imgs/icon-github.png" alt="GitHub">
@@ -254,6 +238,8 @@ Inclui telas como menu principal, seleção de modos de jogo, área social, loja
   
 <!--- JAVASPRIPT-->
     <script src="script.js" defer></script>
+    <script src="include.js"></script>
+
 
 
     </body>
