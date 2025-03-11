@@ -1,0 +1,128 @@
+
+/* ------------------------------------------------------------------------------------ */
+/* HEADER */
+header {
+    position: relative; /* Define o header como referência para o posicionamento absoluto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+  }
+  
+  .logo a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  a:link, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+  }
+  .logo {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* 📱 Ajuste o tamanho do logo para telas menores */
+  @media (max-width: 600px) {
+    .logo {
+      width: 100px; /* Ajuste o tamanho do logo no celular */
+    }
+  }
+  
+  /* 💻 Ajuste para telas médias */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .logo {
+      width: 100px; /* Ajuste o tamanho do logo para tablets */
+    }
+  }
+  
+  /* 🖥️ Ajuste para telas grandes */
+  @media (min-width: 1025px) {
+    .logo {
+      width: 100px; /* Ajuste para desktops */
+    }
+  }
+  
+  
+  /* ------------------------------------------------------------------------------------ */
+  /* MENU */
+  
+  nav ul {
+    display: flex; /* Exibe os itens do menu lado a lado */
+    list-style: none; /* Remove as bolinhas */
+    padding: 0;
+    margin: 0;
+    gap: 20px; 
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul a {
+    position: relative;
+    text-decoration: none;  
+    color: #383838;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-family: 'Montserrat', sans-serif; 
+    transition: color 0.3s ease;
+  }
+  
+  nav ul a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Começa com largura zero */
+    height: 2px;
+    background-color: #383838; /* Cor da linha */
+    transition: width 0.3s ease-in-out; /* Animação da largura */
+  }
+  
+  nav ul a:hover::after {
+    width: 100%; /* Expande a linha para a largura total do link */
+  }
+  
+  
+  .hamburger {
+    display: none; /* Oculta o ícone de hambúrguer por padrão */
+    cursor: pointer;
+    font-size: 40px; /* Ajusta o tamanho do ícone do hambúrguer */
+    color: #000;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      padding: 20px 40px 0px 40px;
+    }
+  
+    nav ul {
+      display: none; /* Esconde o menu em telas menores por padrão */
+      flex-direction: column;
+      position: absolute;
+      top: calc(100% + 10px); /* Posiciona o menu logo abaixo do header */
+      right: 0;
+      width: 100%; /* O menu ocupa toda a largura da tela */
+      background-color: #f9f9f9;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+      z-index: 10; /* Garante que o menu fique acima de outros elementos */
+    }
+  
+    nav ul.active {
+      display: flex; /* Exibe o menu ao clicar no menu hambúrguer */
+    }
+  
+    .hamburger {
+      display: block; /* Mostra o ícone de hambúrguer em telas pequenas */
+    }
+  
+  }
+  
