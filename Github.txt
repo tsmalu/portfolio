@@ -3,3 +3,12 @@ git add .
 git commit -m "Criação de componente: header"
 
 git push origin main
+
+
+
+
+git add . 
+
+git commit -m "gtag.js"
+
+git push origin main

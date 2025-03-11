@@ -38,13 +38,18 @@
 
         
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRSKEFYKZ7"></script>
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=G-PRSKEFYKZ7"></script>
         <script>
-             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-             gtag('config', 'G-PRSKEFYKZ7');
+          window.addEventListener('load', function() {
+            setTimeout(function() {
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PRSKEFYKZ7');
+            }, 2000); // Adia o carregamento do GTM em 2 segundos
+          });
         </script>
+        
 
 
 
