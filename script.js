@@ -1,8 +1,5 @@
-console.log("Arquivo script.js carregado com sucesso");
-
 // Função para alternar a visibilidade de todas as descrições
 function toggleAllDescriptions() {
-  // Seleciona todos os cartões de persona
   const personaCards = document.querySelectorAll('.persona-card');
   let allExpanded = true;
 
@@ -38,15 +35,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Seleciona o ícone do menu hambúrguer e o menu
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('nav ul');
+// Função para inicializar os eventos após o header ser carregado
+function initMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const menu = document.querySelector('nav ul');
 
-// Adiciona um evento de clique ao hambúrguer
-hamburger.addEventListener('click', () => {
-  // Alterna a classe 'active' no menu para exibi-lo ou ocultá-lo
-  menu.classList.toggle('active');
+  if (hamburger && menu) {
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  }
+}
+
+// Verifica quando o header foi carregado e chama a função initMenu()
+document.addEventListener("DOMContentLoaded", () => {
+  const checkHeader = setInterval(() => {
+    if (document.querySelector('.hamburger')) {
+      clearInterval(checkHeader);
+      initMenu();
+    }
+  }, 100);
 });
+
+
 
 // componente de abas 
 document.addEventListener("DOMContentLoaded", function () {
