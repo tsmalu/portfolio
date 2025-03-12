@@ -9,10 +9,6 @@ header {
     padding: 20px 100px;
   }
 
-
-
-
-
 /* LOGO */
   .logo a {
     color: inherit;
@@ -47,6 +43,7 @@ header {
       width: 100px;
     }}
   
+
   /* MENU */
   
   nav ul {
@@ -56,11 +53,10 @@ header {
     margin: 0;
     gap: 20px; 
   }
-  
+
   nav ul li {
     display: inline-block;
   }
-
 
   nav ul a {
     position: relative;
@@ -143,3 +139,7 @@ header {
       display: flex;
     }
   }
+
+  /* ------------------------------------------------------------------------------------ */
+/* FOOTER */
+

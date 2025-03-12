@@ -1,6 +1,6 @@
 git add . 
 
-git commit -m "Criação de componente: header"
+git commit -m "Criação de componente: footer"
 
 git push origin main
 
