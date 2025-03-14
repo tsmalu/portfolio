@@ -9,6 +9,6 @@ git push origin main
 
 git add . 
 
-git commit -m "ajuste no logo"
+git commit -m "ajuste sitemap"
 
 git push origin main
