@@ -9,6 +9,6 @@ git push origin main
 
 git add . 
 
-git commit -m "ajuste sitemap"
+git commit -m "instalação do hotjar"
 
 git push origin main

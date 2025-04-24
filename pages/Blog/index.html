@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Malu Design</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluency-systems-filled/48/null/new-moon.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/sections.css">
+    <link rel="stylesheet" href="../../css/header-footer.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+
+</head>
+<body>
+
+<!-- Header -->
+<div data-include="../../components/header.html"></div>
+
+
+<!-- TOPO FIXO COM RETÂNGULO PRETO -->
+<div class="blog-hero-banner"></div>
+
+<!-- CONTEÚDO GERAL EM DUAS COLUNAS -->
+<section class="blog-layout">
+
+  <!-- COLUNA ESQUERDA: PERFIL -->
+  <div class="blog-hero">
+    <div class="hero-avatar"></div>
+    <h3 class="hero-nome">Malu Sousa</h3>
+    <p class="hero-info">UX/UI Designer | São Paulo, Brasil</p>
+  </div>
+
+  <!-- COLUNA DIREITA: POSTS -->
+  <div class="blog-content">
+    <div class="blog-list">
+        <!-- POST 1 -->
+        <a href="/pages/Blog/Blog-esg.html" class="blog-item">
+            <div class="blog-texto">
+              <h3>Plataforma para gerenciar ações de ESG</h3>
+              <p>O cliente buscava uma solução que ajudasse empresas com a implantação de ações ESG. O projeto incluiu imersão, entrevistas com especialistas e colaboração na definição de escopo e funcionalidades.</p>
+              <div class="data">2023</div>
+            </div>
+            <div class="blog-thumb">
+              <img src="../../imgs/ESG/capa-card-esg.png" alt="Thumb esg">
+            </div>
+          </a>
+
+        <!-- POST 2 -->
+        <a href="/pages/Projeto-esg.html" class="blog-item">
+            <div class="blog-texto">
+              <h3>Título de post</h3>
+              <p>descrição do post</p>
+              <div class="data">2023</div>
+            </div>
+            <div class="blog-thumb">
+              <img src="../../imgs/ESG/capa-card-esg.png" alt="Thumb esg">
+            </div>
+          </a>
+          
+    </div>
+  </div>
+
+</section>
+
+
+
+<br><br><br>
+
+
+<!-- FOOTER -->
+<div data-include="../../components/footer.html"></div>
+
+
+<!-- SCRIPTS -->
+<script src="/include.js"></script>
+<script src="/script.js"></script>
+</body>
+</html>

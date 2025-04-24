@@ -1,0 +1,114 @@
+/* Retângulo cinza */
+.blog-hero-banner {
+    width: 100%;
+    height: 140px;
+    background-color: #383838;
+  }
+  
+  /* Container lateral */
+  .blog-layout {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    padding-left: -20p;
+
+    
+  }
+  
+  
+  /* Lado esquerdo (perfil sobreposto) */
+  .blog-hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* alinhado à esquerda */
+    text-align: left;
+    margin-top: -100px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  
+  .hero-avatar {
+    width: 120px;
+    height: 120px;
+    background: url('../../imgs/global/foto-malu.jpeg') center/cover no-repeat;
+    border: 4px solid white;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-nome {
+    margin: 0;
+  }
+  
+  .hero-info {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0.2rem 0;
+  }
+  
+  /* Lado direito (conteúdo começa abaixo do banner) */
+  .blog-content {
+    flex: 2;
+    margin-top: 2rem; /* puxa pra baixo, abaixo do banner */
+  }
+  
+  /* Lista e post */
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .blog-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+    height: 160px; /* altura fixa */
+  }
+  
+  .blog-texto {
+    width: 600px; /* ← largura fixa aqui */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente */
+  }
+  
+  
+  .blog-texto h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0.2rem;
+
+  }
+  
+  .blog-texto p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 0 0.5rem;
+  }
+  
+  
+  .blog-thumb img {
+    width: 200px;
+    height: 140px;  
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .data {
+    font-size: 0.85rem;
+    color: #999;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  
