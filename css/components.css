@@ -362,7 +362,67 @@ color: #333;
 
 
 
+/* Imagem workshop */
+.project-workshop-images {
+display: flex;
+gap: 16px; /* Espaço entre as imagens */
+width: 100vw; /* Ocupa toda a largura da janela de visualização */
+margin-left: calc(50% - 50vw); /* Centraliza as imagens na página */
+position: relative; /* Para evitar deslocamento inesperado */
+padding-bottom: 36px;
+opacity: 0; /* Oculto no início */
+transform: translateY(50px); /* Começa deslocado para baixo */
+animation: slideUp 1.5s ease-out forwards;
+animation-delay: 1.2s; /* Define o atraso (ajuste conforme necessário) */
+}
 
+.project-workshop-images img {
+width: 100%; /* Cada imagem ocupa metade do contêiner */
+max-width: 50%; /* Cada imagem ocupa 50% do contêiner */
+object-fit: cover;
+}
+
+@media (max-width: 767px) {
+
+.project-content {
+  padding: 0px 24px; 
+}
+
+.project-content h2 {
+  font-size: 54px;
+margin: 0; /* Remove qualquer margem padrão */
+}
+.section-introduction img {    
+  max-width: 100%; /* A primeira imagem ocupa 100% da largura */
+  opacity: 0; /* Oculto no início */
+  animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+  animation-delay: 0.5s; 
+}
+
+.project-workshop-images img:nth-child(2) {
+  display: none; /* Oculta a segunda imagem */
+}
+
+.project-workshop-images img:nth-child(1) {
+  max-width: 100%; /* A primeira imagem ocupa 100% da largura */
+}
+
+.project-workshop-images { 
+      width: 100vw; /* Faz a imagem ocupar a largura inteira da tela */
+      margin-left: calc(50% - 50vw); /* Centraliza o contêiner da imagem */
+    }
+  
+    .project-workshop-images img {
+      max-width: 100%; /* A imagem ocupa toda a largura disponível */
+    }
+  }
+  
+.project-image img {
+  max-width: 100% !important;
+  opacity: 0; /* Oculto no início */
+  animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
+  animation-delay: 0.5s; 
+}
 
 /* ---------------------------------------------------------------------------*/
 /* Seção de Personas */
