@@ -38,13 +38,7 @@
     gap: 1rem;
     align-items: flex-start;
   }
-  
-  /* Linha lateral roxa mais grossa */
-  .summary-line {
-    width: 5px; /* aumentei */
-    background-color: #4B1DA0;
-    min-height: 100%;
-  }
+
   
   /* Texto do projeto */
   .summary-content p {
@@ -57,3 +51,134 @@
     margin-bottom: 1rem;
   }
   
+  /* Imagem FULLPAGE */
+  .project-image-full {
+    display: flex;
+    justify-content: center; /* centraliza a imagem se ela for menor */
+    width: calc(100vw - 160px); /* 100% da tela - 80px de cada lado */
+    margin-left: calc(50% - 50vw + 80px); /* Centraliza com respiro lateral */
+    position: relative;
+    padding-bottom: 36px;
+    overflow: hidden; /* importante pra cortar se estourar */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1.5s ease-out forwards;
+    animation-delay: 1.2s;
+  }
+
+
+  .project-image-full img {
+    width: 100%;
+    height: auto;
+    max-height: 90vh; /* imagem ocupa no máximo 90% da altura da tela */
+    object-fit: cover; /* faz ela "preencher" bonito */
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px; 
+    margin-bottom: 1rem;
+  }
+  
+  .section-header img {
+    width: 48px; /* Tamanho do ícone */
+    height: 48px;
+    border-radius: 12px; /* Se quiser arredondar como no seu exemplo */
+    background-color: #f3eaff; /* Fundo lilás se precisar preencher igual seu exemplo */
+    padding: 8px; /* Ajusta o ícone dentro do fundo */
+    object-fit: contain;
+  }
+  
+/* Imagem para projeto */
+/* Container para a imagem do projeto */
+.project-image {
+  display: block;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  max-width: 800px; /* Define a mesma largura máxima da .project-content */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+  padding-bottom: 36px;
+  position: relative;
+  opacity: 0; /* Oculto no início */
+  transform: translateY(50px); /* Começa deslocado para baixo */
+  animation: slideUp 1.5s ease-out forwards;
+  animation-delay: 1.2s;
+  }
+  
+  .project-image img {
+  width: 100%; /* A imagem ocupa toda a largura do contêiner */
+  object-fit: cover;
+  padding-top: 16px;
+  }
+  
+  @media (max-width: 767px) {
+  .project-image {
+    width: 100vw; /* Faz a imagem ocupar a largura inteira da tela */
+    margin-left: calc(50% - 50vw); /* Centraliza o contêiner da imagem */
+  }
+  
+  .project-image img {
+    max-width: 100%; /* A imagem ocupa toda a largura disponível */
+  }
+  }
+  /* Estilo da legenda */
+.project-image figcaption {
+  text-align: center;
+  font-size: 0.875rem; /* um pouco menor */
+  color: #666; /* cinza claro */
+  font-family: 'Montserrat', sans-serif;
+}
+
+ /* imagens do workshop */
+ .project-workshop-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100vw; /* Agora ocupa a largura inteira da tela */
+  margin-left: calc(50% - 50vw); /* Centraliza tirando a margem lateral */
+  padding-bottom: 36px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+
+.workshop-images-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.workshop-images-wrapper img {
+  width: 100%;
+  max-width: 48%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.workshop-caption {
+  font-size: 0.875rem;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+@media (max-width: 768px) {
+  .workshop-images-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .workshop-images-wrapper img {
+    max-width: 100%;
+  }
+}
+
+
+
+/* Estilo  */ 
