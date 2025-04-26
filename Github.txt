@@ -12,3 +12,11 @@ git add .
 git commit -m "instalação do hotjar"
 
 git push origin main
+
+
+
+git add . 
+
+git commit -m "card do bblog add"
+
+git push origin main

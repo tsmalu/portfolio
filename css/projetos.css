@@ -1,0 +1,59 @@
+.project-summary {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0;
+    flex-wrap: wrap; /* para mobile */
+  }
+  
+  .summary-block {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Projeto ocupa 2/3 */
+  .projeto {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  /* Time ocupa 1/3 */
+  .time {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  /* Título */
+  .summary-block h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #383838;
+  }
+  
+  /* Conteúdo principal */
+  .summary-content {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  /* Linha lateral roxa mais grossa */
+  .summary-line {
+    width: 5px; /* aumentei */
+    background-color: #4B1DA0;
+    min-height: 100%;
+  }
+  
+  /* Texto do projeto */
+  .summary-content p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Lista do time */
+  .team-list p {
+    margin-bottom: 1rem;
+  }
+  

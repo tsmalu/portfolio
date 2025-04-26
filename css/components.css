@@ -243,7 +243,7 @@ button a:active {
 /* Breadcrumb */
 .breadcrumb {
   font-size: 14px;
-  margin-bottom: 28px;
+  margin: 2rem auto 3rem auto; /* cima | direita | baixo | esquerda */
   text-align: left;
 }
 
