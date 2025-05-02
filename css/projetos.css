@@ -325,12 +325,16 @@
 }
 
 /* Duas imagens lado a lado na feature */
+/* Duas imagens lado a lado na feature */
 .feature-images-duo {
   display: flex;
   gap: 24px;
   flex: 1;
   justify-content: center;
   align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .feature-images-duo img {
@@ -341,18 +345,23 @@
   display: block;
 }
 
+/* Mobile: stack vertical e ocupa largura total */
 @media (max-width: 767px) {
   .feature-images-duo {
     flex-direction: column;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 0 16px;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    padding: 0 !important;
+    gap: 0;
   }
 
   .feature-images-duo img {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 69% !important;
     border-radius: 0 !important;
     padding: 0 !important;
+    display: block !important;
+    object-fit: cover !important;
   }
 }
+
