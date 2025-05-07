@@ -346,10 +346,12 @@
 }
 
 /* Mobile: stack vertical e ocupa largura total */
+/* Mobile: imagens coladas na borda */
 @media (max-width: 767px) {
   .feature-images-duo {
     flex-direction: column;
     width: 100vw !important;
+
     margin-left: calc(50% - 50vw) !important;
     padding: 0 !important;
     gap: 0;
@@ -357,11 +359,19 @@
 
   .feature-images-duo img {
     width: 100% !important;
-    max-width: 69% !important;
-    border-radius: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
     padding: 0 !important;
-    display: block !important;
+    border-radius: 0 !important;
     object-fit: cover !important;
+    display: block !important;
+  }
+}
+
+/* Desktop: reaplica padding interno só na .feature-images-duo */
+@media (min-width: 768px) {
+  .feature-images-duo {
+    padding: 0 40px;
   }
 }
 
