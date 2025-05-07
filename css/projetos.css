@@ -401,7 +401,6 @@
   gap: 24px;
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 40px;
 }
 
 .feature-images-stack img {
@@ -409,4 +408,24 @@
   border-radius: 8px;
   object-fit: cover;
   display: block;
+}
+/* --- Mobile: full-width real, sem padding lateral --- */
+@media (max-width: 767px) {
+  .feature-images-column,
+  .feature-images-stack {
+    padding: 0 !important;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+  }
+
+  .feature-images-column img,
+  .feature-images-stack img {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
