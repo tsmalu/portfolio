@@ -17,6 +17,6 @@ git push origin main
 
 git add . 
 
-git commit -m "componente de botão"
+git commit -m "ajuste "
 
 git push origin main
