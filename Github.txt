@@ -17,6 +17,6 @@ git push origin main
 
 git add . 
 
-git commit -m "ajuste "
+git commit -m "atualização no rodapé e página sobre "
 
 git push origin main
