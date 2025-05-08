@@ -7,15 +7,11 @@
         <meta name="description" content="Conheça os projetos criativos e inovadores da Malu. Soluções visuais para branding, UI/UX e animação." />
         <link rel="icon" type="image/png" href="https://img.icons8.com/fluency-systems-filled/48/null/new-moon.png"/>
 
-        <!--preload-->
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"> <noscript>
-
-        <!-- Fonte Montserrat -->
-
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <!--Tipografia-->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"> <noscript>  
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
         </noscript>
         
-
         <!-- Tags Open Graph para compartilhamento -->
         <meta property="og:title" content="Product Designer | UX/UI Designer">
         <meta property="og:description" content="Confira o portfólio de design da Malu Sousa, com projetos de UX/UI e design gráfico.">
@@ -29,6 +25,8 @@
         <link rel="stylesheet" href="../css/components.css?v=1">
         <link rel="stylesheet" href="../css/sections.css?v=1">
         <link rel="stylesheet" href="css/header-footer.css">
+        <link rel="stylesheet" href="css/button.css">
+
 
         
         <!-- Google tag (gtag.js) -->
@@ -40,50 +38,48 @@
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-PRSKEFYKZ7');
-            }, 2000); // Adia o carregamento do GTM em 2 segundos
+            }, 2000);
           });
         </script>
         
         <!--HOTJAR-->
-      <script>
-      (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:5337382,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-      </script>
-
-
-
+        <script>
+       (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5337382,hjsv:6};
+       a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+         </script>
     </head>
+
     <body>
-     <!-- Header -->
+<!-- Header -->
      <div data-include="components/header.html"></div>
 
-     <!-- hero section -->
-    <section class="hero-section">
+<!-- hero section -->
+      <section class="hero-section">
         <h1>Portfólio de design</h1>
         <p>Olá, me chamo malu! sou designer com 10 anos de experiência em empresas de tecnologia, varejo e consultoria.
             Atuo de ponta a ponta no design de produtos digitais e com criação de marcas e identidade visual.</p>
-    </section>
-
-
+      </section>
     
-    <!-- PROJETO DESTAQUE -->
+<!-- PROJETO DESTAQUE -->
     <section class="project-highlight container">
       <div class="project-highlight-text">
         <h2>Plataforma ESG para empresas</h2>
         <p>O cliente buscava uma solução que ajudasse empresas com a implantação de ações ESG. O projeto incluiu imersão, entrevistas com especialistas e definição de funcionalidades.</p>
         <a href="/pages/Projeto-esg.html">
-          <button>Ver projeto</button>
+          <div data-include="components/button.html" data-url="/pages/Projeto-esg.html" data-texto="Ver projeto"></div>
         </a>
       </div>
+
       <div class="project-highlight-img">
         <img src="imgs/ESG/esg-project-destaque-800w.webp" alt="Dashboard do projeto ESG">
       </div>
+
     </section>
     
 
@@ -167,10 +163,14 @@ Inclui telas como menu principal, seleção de modos de jogo, área social, loja
 </section>
 
 
-<section class="link-projetos">
-    <button><a href="pages/projetos.html">     Ver todos os projetos</a></button>
-</section>
+    <section class="link-projetos">
+        <div data-include="components/button.html" data-url="pages/projetos.html" data-texto="Ver todos os projetos"></div>
+
+    </section>
 <br>
+
+
+
 
 
 
