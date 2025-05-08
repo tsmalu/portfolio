@@ -17,6 +17,6 @@ git push origin main
 
 git add . 
 
-git commit -m "correção no case garsoni"
+git commit -m "componente de botão"
 
 git push origin main
