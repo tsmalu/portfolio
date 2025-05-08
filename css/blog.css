@@ -111,4 +111,56 @@
     font-family: 'Montserrat', sans-serif;
   }
   
+  @media (max-width: 767px) {
+    .blog-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 0 16px;
+    }
+    .blog-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      gap: 1rem;
+      padding: 24px;
+      margin-bottom: 24px;
+      background: #fff;
+      border: 1px solid #E0E0E0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    .blog-thumb img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  
+    .blog-texto {
+      width: 100%;
+    }
+  
+    .blog-texto h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+  
+    .blog-texto p {
+      font-size: 1rem;
+      color: #666;
+      margin: 0 0 16px;
+    }
+  
+    .data {
+      font-size: 0.85rem;
+      color: #999;
+    }
+  }
+  
   
