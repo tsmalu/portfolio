@@ -20,11 +20,20 @@
     font-style: normal;
     font-display: swap;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
+  
 body {
     background-color: #F9F9F9;
     color: #383838;
     line-height: 1.6;
+}
+
+
+footer {
+
+    background: white;
 }
 
 /* ------------------------------------------------------------------------------------ */

@@ -11,9 +11,9 @@
 .hero-section h1 {
 display: block;
 text-align: center;
-opacity: 0; /* Oculto no início */
-transform: translateY(50px); /* Começa deslocado para baixo */
-animation: slideUp 1s ease-out forwards; /* Aplica a animação */
+opacity: 0; 
+transform: translateY(50px); 
+animation: slideUp 1s ease-out forwards; 
 margin: 0 auto; 
 }
 
@@ -61,6 +61,77 @@ text-align: center;
   opacity: 1;
 }
 }
+
+
+/* PÁGINA COMERCIAL *//* HERO CUSTOM */
+.hero-custom {
+  text-align: center;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-custom h1 {
+  display: block;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s ease-out forwards;
+  margin: 0 auto;
+  margin-bottom: 30px; 
+}
+
+.hero-tags {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px; /* espaçamento maior entre h1 e tags */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-tags .tag {
+  background-color: #f0f0f0;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+/* Animações */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 767px) {
+  .hero-custom {
+    padding: 40px 24px 0 24px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-custom h1 {
+    font-size: 60px;
+  }
+}
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------ */
 /* PROJETO EM DESTAQUE */
