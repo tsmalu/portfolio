@@ -17,6 +17,6 @@ git push origin main
 
 git add . 
 
-git commit -m "atualização no rodapé e página sobre "
+git commit -m "novo post no blog"
 
 git push origin main
