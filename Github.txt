@@ -17,6 +17,6 @@ git push origin main
 
 git add . 
 
-git commit -m "novo post no blog"
+git commit -m "add componente profile-card"
 
 git push origin main

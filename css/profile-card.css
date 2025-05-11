@@ -1,0 +1,86 @@
+.profile-card {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 32px;
+    margin: 40px auto;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+  }
+  
+  .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-info h3 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  
+  .profile-info p {
+    margin: 4px 0 16px;
+    color: #666;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .social-links a:hover {
+    color: #0077b5;
+  }
+  
+  .social-links img {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+  
+  .contact-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
