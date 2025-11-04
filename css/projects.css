@@ -1,0 +1,89 @@
+/* ------------------------------------------------------------------------------------ */
+/* PROJETOS PRINCIPAIS – GRID 2x2 NO DESKTOP, 1xN NO MOBILE */
+
+.projects-section {
+    display: grid;
+    gap: 24px;
+    padding: 60px 0 0;
+    grid-template-columns: 1fr;        /* mobile: 1 por linha */
+    align-items: start;
+    justify-items: stretch;
+  }
+  
+  /* Header (título à esquerda, botão à direita) */
+  .projects-header {
+    grid-column: 1 / -1;               /* header ocupa a linha inteira */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  /* Desktop: 2 colunas fixas */
+  @media (min-width: 900px) {
+    .projects-section {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  /* Card — cada <a> ocupa 1 célula da grade */
+  .projects-section > a.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-self: stretch;
+    width: 100%;
+    max-width: none;
+    background: #fff;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  /* Hover suave */
+  .projects-section > a.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+ /* Área da imagem (definida em px) */
+.projects-section > a.project-card .imagem {
+    width: 100%;
+    height: 260px;          /* 🔥 altura fixa da imagem */
+    overflow: hidden;
+  }
+  
+  .projects-section > a.project-card .imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Conteúdo do card */
+  .projects-section > a.project-card .conteudo {
+    padding: 20px 24px;
+  }
+  
+  /* Header responsivo */
+  @media (max-width: 767px) {
+    .projects-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+  
+  /* === Garantia de alinhamento e preenchimento correto === */
+  .projects-section > *:not(.projects-header) {
+    justify-self: stretch;
+    min-width: 0;  /* evita compressão por overflow */
+  }
+  
+  .projects-section > a.project-card > .imagem,
+  .projects-section > a.project-card > .conteudo {
+    width: 100%;
+  }
+  

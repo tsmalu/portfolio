@@ -23,12 +23,7 @@ animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
 animation-delay: 0.5s; 
 }
 
-.hero-section button {
-opacity: 0;
-transform: translateY(40px); /* Começa deslocado para baixo */
-animation: slideUp 1s ease-out forwards;
-animation-delay: 1s; /* Adiciona atraso para o botão aparecer depois do parágrafo */
-}
+
 @media (max-width: 767px) {
 .hero-section {
 padding: 40px 24px 0 24px;
@@ -129,8 +124,21 @@ text-align: center;
 
 
 
+/* ------------------------------------------------------------------------------------ */
+/* 3 colunas (serviços) */
+.skills-section {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr;               /* mobile */
+}
 
-
+/* breakpoints */
+@media (min-width: 640px) {
+  .skills-section { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .skills-section { grid-template-columns: repeat(3, 1fr); }
+}
 
 
 /* ------------------------------------------------------------------------------------ */
@@ -222,38 +230,6 @@ border-radius: 8px;
     color: #fff;
   }
 }
-
-
-
-
-
-
-/* ------------------------------------------------------------------------------------ */
-/* Seção de Projetos */
-.projects-section {
-  display: flex;
-  justify-content: flex-start; /* Alinha todos os itens ao lado esquerdo */
-  gap: 24px;
-  padding: 60px 0 0 0px;
-  flex-wrap: wrap;
-  opacity: 0; /* Oculto no início */
-  transform: translateY(50px); /* Começa deslocado para baixo */
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-}
-
-.projects-section.animate {
-  opacity: 1;
-  transform: translateY(0); /* Posição final */
-}
-
-.project-button-container {
-  width: 100%; /* O botão ocupa toda a largura da seção */
-  display: flex;
-  justify-content: center; /* Centraliza o botão horizontalmente */
-}
-
-
-
 
 
 /* ------------------------------------------------------------------------------------ */
@@ -559,91 +535,4 @@ body.js-enabled .contact-section {
 .perfil-icons img {
   width: 46px;
   height: 46px;
-}
-
-
-/* ------------------------------------------------------------------------------------ */
-/* Estilo do elemento animado */
-
-.animações {
-  display: flex;
-  justify-content: center;
-  gap: 200px;
-  padding: 100px 0 300px;
-  align-items: center;
-}
-
-.elemento-animado {
-  width: 200px;
-  height: 200px;
-  background-color: #0052cc;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  text-align: center;
-
-  animation-duration: 3s;
-  animation-name: spin;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes spin { 
-  0% {
-  }
-  50% {
-    scale: 1.5;
-    transform: rotate(0);
-    border-radius: 0;
-  }
-  100% {
-    transform: rotate(360deg);
-    border-radius: 50%;
-    scale: 1.5;
-  }  
-}
-
-.elemento-animado-2 {
-  background-color: #383838; 
-  animation-fill-mode: forwards; 
-  animation-duration: 3s;
-  animation-name: spin;
-  animation-timing-function: ease-in-out;
-  animation-direction: normal; 
-  animation-play-state: paused;
-}
-.elemento-animado-2:hover{ 
-  animation-play-state: running;
-}
-
-.loading {
-  height: 50px;
-  width: 50px;
-  border: 6px solid rgb(139, 49, 230);
-  border-radius: 4px;
-  box-shadow: 0 0 8px rgb(139, 49, 230), 0 0 8px rgb(139, 49, 230) inset;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: 10;
-  animation: 2s loading ease-in-out infinite;
-}
-
-@keyframes loading {
-  0% {
-    transform: rotateX(0) rotateY(0) rotateZ(0);
-  }
-  33% {
-    transform: rotateX(180deg) rotateY(0) rotateZ(0);
-  }
-  67% {
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
-  }
-  100% {
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
-  }
 }

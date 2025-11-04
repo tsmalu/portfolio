@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="../css/sections.css?v=1">
         <link rel="stylesheet" href="css/header-footer.css">
         <link rel="stylesheet" href="css/button.css">
+        <link rel="stylesheet" href="css/projects.css?v=1">
+
 
 
         
@@ -61,34 +63,57 @@
 
 <!-- hero section -->
       <section class="hero-section">
-        <h1>Portfólio de design</h1>
-        <p>Olá, me chamo malu! sou designer com 10 anos de experiência em empresas de tecnologia, varejo e consultoria.
-            Atuo de ponta a ponta no design de produtos digitais e com criação de marcas e identidade visual.</p>
+        <h1>Olá, eu sou malu, product designer.</h1>
+        <p>Com 10 anos de experiência em design, me sinto à vontade em todo o processo de criação, 
+          do entendimento de contexto à entrega de interfaces. Acredito que um bom design nasce da 
+          colaboração e da estratégia.</p>
       </section>
     
-<!-- PROJETO DESTAQUE -->
-    <section class="project-highlight container">
-      <div class="project-highlight-text">
-        <h2>Plataforma ESG para empresas</h2>
-        <p>O cliente buscava uma solução que ajudasse empresas com a implantação de ações ESG. O projeto incluiu imersão, entrevistas com especialistas e definição de funcionalidades.</p>
-        <a href="/pages/Projeto-esg.html">
-          <div data-include="components/button.html" data-url="/pages/Projeto-esg.html" data-texto="Ver projeto"></div>
-        </a>
-      </div>
 
-      <div class="project-highlight-img">
-        <img src="imgs/ESG/esg-project-destaque-800w.webp" alt="Dashboard do projeto ESG">
-      </div>
-
-    </section>
+<!-- SERVIÇOS -->
+<section class="skills-section container">
+  <div class="skill-item">
+    <h5>Product design</h5>
+    <p>Crio produtos digitais de ponta a ponta ao lado do negócio.</p>
+  </div>
+  <div class="skill-item">
+    <h5>UX/UI design</h5>
+    <p>Desenvolvo interfaces intuitivas e acessíveis com foco no usuário.</p>
+  </div>
+  <div class="skill-item">
+    <h5>Design systems</h5>
+    <p>Planejo e gerencio bibliotecas com padrões de design.</p>
+  </div>
+</section>
     
 
-    <!-- PROJETOS --------------------------------------------------------------->
+<!-- PROJETOS --------------------------------------------------------------->
  <section class="projects-section container projects-page">
+  <div class="projects-header">
+    <h4>Projetos principais</h4>
+    <div data-include="../components/button.html" data-url="../pages/projetos.html" data-texto="Ver todos">
+    </div>
+  </div>
 
-    <!-- Card 1 -->
-<a href="pages/Projeto-uigame.html" class="project-card">
-<div class="imagem">
+<!-- Card 1 -->
+<a href="pages/Projeto-esg.html" class="project-card">
+  <div class="imagem">
+  <img 
+  src="imgs/ESG/capa-card-esg.png" 
+  alt="Tela da plataforma esg">
+
+  </div>
+  <div class="conteudo">
+<h5>Plataforma para gerenciar ações de ESG</h5>
+
+<p id="truncated-text">Solução que ajuda empresas com a ações ESG. O projeto inclui 
+  imersão, prototipação e testes de usabilidade.</p>
+  </div>
+    </a>
+
+<!-- Card 2 -->
+    <a href="pages/Projeto-uigame.html" class="project-card">
+    <div class="imagem">
     <img 
     src="imgs/Game-UI/capa-uigame-800w.webp" 
     srcset="
@@ -98,20 +123,16 @@
     sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
     alt="Tela inicial do jogo">
   
-</div>
-<div class="conteudo">
-<h3>Interface para jogo</h3>
-<div class="tags">
-<span class="tag">UI e UX</span>
-<span class="tag">identidade visual</span>
-<span class="tag">Interface</span>
-</div>
-<p id="truncated-text">Criação de componentes para a interface de um jogo de xadrez.
-Inclui telas como menu principal, seleção de modos de jogo, área social, loja, tutoriais e interface para partidas multiplayer. </p>
-</div>
-</a>
+    </div>
+    <div class="conteudo">
+  <h5>Interface para jogo</h5>
 
-<!-- Card 2 -->
+<p id="truncated-text">Criação de componentes para a interface de um jogo de xadrez.
+Inclui telas como menu, seleção de modos, área social, loja e etc. </p>
+    </div>
+      </a>
+
+<!-- Card 3 -->
 <a href="pages/Projeto-Redesign-fretadao.html" class="project-card">
 <div class="imagem">
     <img 
@@ -124,18 +145,14 @@ Inclui telas como menu principal, seleção de modos de jogo, área social, loja
     alt="Tela inicial do site fretadão">
   </div>
 <div class="conteudo">
-<h3>Redesign de Marca e Site </h3>
-<div class="tags">
-<span class="tag">UI e UX</span>
-<span class="tag">identidade visual</span>
-<span class="tag">web design</span>
-</div>
+<h5>Redesign de Marca e Site </h5>
+
 <p>Reformulação visual da marca e criação de site para startup de transporte, 
     projeto otimiza layout para comunicar nova marca.</p>
 </div>
 </a>
 
-<!-- Card 3 -->
+<!-- Card 4 -->
 <a href="pages/ProjetoEnjoei.html" class="project-card">
 <div class="imagem">
     <img 
@@ -151,22 +168,14 @@ Inclui telas como menu principal, seleção de modos de jogo, área social, loja
     git push origin main
     </div>
 <div class="conteudo">
-<h3>Banners para enjoei.com</h3>
-<div class="tags">
-<span class="tag">design gráfico</span>
-<span class="tag">ilustração</span>
-</div>
+<h5>Banners para enjoei.com</h5>
+
 <p>Criação de materiais para campanhas de marketing para engajamento com o público. </p>
 </div>
 </a>
 
+
 </section>
-
-
-    <section class="link-projetos">
-        <div data-include="components/button.html" data-url="pages/projetos.html" data-texto="Ver todos os projetos"></div>
-
-    </section>
 <br>
 
 

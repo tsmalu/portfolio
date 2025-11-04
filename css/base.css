@@ -45,7 +45,7 @@ p {
     max-width: 600px;
     }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
       font-family: 'MangoGrotesque';
       font-weight: 500;
       margin-bottom: 8px;
@@ -57,26 +57,19 @@ h1 {
 }
 
 h2 {
-    font-size: 70px;
+    font-size: 80px;
 }
 
 h3 {
-    font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
-    line-height: normal;
+    font-size: 70px;
     margin-bottom: 0.5rem;
 }
 
 h4 {
-  font-size:18px;
-  font-family: 'Montserrat', sans-serif;
-  line-height: normal;
-  padding: 4px 0;
+  font-size:66px;
 
 }
 
 h5 {
-    font-size:16px;
-    font-family: 'Montserrat', sans-serif;
-    line-height: normal;
+    font-size:46px;
   }

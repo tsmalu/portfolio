@@ -1,12 +1,8 @@
-
-
 /* ------------------------------------------------------------------------------------ */
-/* CARD */
+/* COMPONENTE: CARD GENÉRICO */
 
 .project-card {
   display: block;
-  flex: 1 1 calc(33.333% - 20px); /* 3 cards por linha */
-  max-width: calc(33.333% - 20px);
   border: 1px solid #E0E0E0;
   border-radius: 8px;
   overflow: hidden;
@@ -14,7 +10,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   color: inherit;
-  margin-bottom: 20px; /* Espaçamento entre as linhas de cards */
 }
 
 .project-card:hover {
@@ -22,6 +17,7 @@
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Link sempre sem sublinhado */
 .project-card:link,
 .project-card:visited,
 .project-card:hover,
@@ -30,81 +26,46 @@
   text-decoration: none;
 }
 
-/* Truncamento de texto para cards */
-.truncated-text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2; /* Limita para 2 linhas */
-  line-clamp: 2; /* Para navegadores compatíveis */
-}
-
-/* Layout responsivo */
-@media (max-width: 1024px) {
-  .project-card {
-    flex: 1 1 50%; /* Em telas médias, 2 cards por linha */
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 767px) {
-  .projects-section {
-    display: block; /* Empilha os cards em telas menores */
-    gap: 20px;
-  }
-
-  .project-card {
-    flex: 1 1 100%; /* Em telas pequenas, 1 card por linha */
-    max-width: 100%;
-    margin: 0 auto 20px; /* Margem inferior para espaçamento entre os cards */
-  }
-}
-
-/* Estilos de Imagem e Conteúdo do Card */
+/* Imagem e conteúdo internos */
 .project-card .imagem {
   width: 100%;
-  height: 200px;
   overflow: hidden;
 }
 
 .project-card .imagem img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   border-bottom: 2px solid #E0E0E0;
+  display: block;
 }
 
-.project-card .imagem.centralizada {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do card */
+/* Conteúdo */
+.project-card .conteudo {
+  padding: 20px;
 }
 
-.project-card .imagem.centralizada img {
-  object-fit: cover; /* Mantém a imagem preenchendo o espaço */
-  object-position: center; /* Centraliza a imagem */
-  width: 105%; /* Aumenta ligeiramente a imagem */
-  height: 105%; /* Aumenta ligeiramente a imagem */
-  transform: scale(1.1); /* Aproxima a imagem sem cortar demais */
+/* Título */
+.project-card h3,
+.project-card h4 {
+  margin: 10px 0 16px;
+  line-height: 1.3;
 }
 
-
-.project-card h3 {
-  margin: 10px 0; /* Margem superior e inferior */
-  line-height: 1.3; /* Ajuste da altura da linha */
-  margin-bottom: 16px;
-}
-  
-
+/* Tags */
 .project-card .tags {
   pointer-events: none;
 }
 
-.conteudo {
-  padding: 20px;
+/* Truncamento opcional de texto */
+.truncated-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 
