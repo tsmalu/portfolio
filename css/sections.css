@@ -14,7 +14,7 @@ text-align: center;
 opacity: 0; 
 transform: translateY(50px); 
 animation: slideUp 1s ease-out forwards; 
-margin: 0 auto; 
+margin: 0 auto 8px auto; /* agora tem margin-bottom */
 }
 
 .hero-section p {
