@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experimentando Frontend</title>
+
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency-systems-filled/48/null/new-moon.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Estilos CSS (ordem preservada) -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRSKEFYKZ7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PRSKEFYKZ7');
+  </script>
+
+  <!-- HOTJAR -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:5337382,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+</head>
+<body>
+
+  <!-- Header (com include) -->
+  <div data-include="../components/header.html"></div>
+
+  <main class="project-content" aria-labelledby="page-title">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="../index.html">Início</a> &gt;
+      <span>Jornada HTML & CSS</span>
+    </nav>
+
+    <!-- Título + tags + autora -->
+    <section class="project-title" id="page-title">
+      <h2>Experimentando Frontend</h2>
+
+      <div class="tags" aria-label="categorias">
+        <span class="tag">Estudos</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">Front-end</span>
+      </div>
+
+      <div class="author-info">
+        <img src="../imgs/global/foto-malu.jpeg" alt="Foto de Maria Luisa" class="author-avatar">
+        <div class="author-details">
+          <div class="author-name">Malu Sousa <span class="follow">• Designer</span></div>
+          <div class="publication-details">Estudos e projetos pessoais • 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introdução / Contexto -->
+    <section class="section-introduction">
+      <p>
+        Sempre gostei de ver o design ganhando vida.
+Aprender HTML, CSS e JavaScript tem sido entender como o design conversa com o código.
+Aqui é um espaço pra aprender criando e compartilhar meus primeiros estudos e experimentos no frontend.
+      </p>
+      <p>Esse site é o resultado dos meus primeiros passos no Frontend. Comecei com a curiosidade 
+        de entender como o design é aplicado no código e acabei transformando meu portfólio em um
+         laboratório. Aqui registro o que aprendi em HTML, CSS e JavaScript.</p>
+
+      
+    </section>
+
+    <!-- Lista(documentação visual) -->
+    <section class="section-challenges" aria-labelledby="lista-desafios">
+      <h5 id="lista-desafios">Estrutura do Head e Organização do CSS</h5>  
+      <p><p>Aprendi a estruturar o <code>&lt;head&gt;</code> com metadados, fontes, favicon e 
+        tags de compartilhamento. Também organizei o CSS por função: base, layout, componentes e 
+        seções pra facilitar manutenção e garantir consistência visual. Usei versionamento 
+        simples com <code>?v=1</code> pra evitar cache antigo e integrei scripts de análise 
+        como Google Tag e Hotjar.</p>
+    </p>
+      
+      
+      
+    
+    
+    
+    </section>
+
+  </main>
+
+  <br><br><br><br>
+
+  <!-- CONTATO -->
+  <div data-include="../components/contato.html"></div>
+
+  <!-- FOOTER -->
+  <div data-include="../components/footer.html"></div>
+
+  <!-- Scripts -->
+  <script src="../script.js" defer></script>
+  <script src="../include.js"></script>
+</body>
+</html>
