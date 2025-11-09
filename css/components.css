@@ -407,11 +407,7 @@ margin: 0; /* Remove qualquer margem padrão */
 .card-text {
   flex: 1; /* O texto ocupa o espaço restante */
 }
-.card-text h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0 0 8px; /* Espaçamento inferior */
-}
+
 
 .card-text p {
   font-size: 14px;

@@ -45,7 +45,7 @@ p {
     max-width: 600px;
     }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
       font-family: 'MangoGrotesque';
       font-weight: 500;
       line-height: 100%;
@@ -71,4 +71,8 @@ h4 {
 
 h5 {
     font-size:46px;
+  }
+  
+h6 {
+    font-size:34px;
   }
