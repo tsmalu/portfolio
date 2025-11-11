@@ -1,33 +1,105 @@
-/* Normaliza a base tipográfica da página de projetos */
-html { font-size: 16px; }              /* garante REM/EM iguais ao resto do site */
-body.projects-page { font-size: 100%; } /* se você usa a classe no <body> */
-
-
-
-
-/* PROJETOS: grid + altura da imagem */
-.projects-section { display:grid; gap:24px; padding:60px 0 0; grid-template-columns:1fr; align-items:start; }
-@media (min-width:900px){ .projects-section{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
-
-.projects-header{ grid-column:1/-1; display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
-
-.projects-section > a.project-card{
-  display:flex; flex-direction:column; justify-self:stretch; width:100%;
-  background:#fff; border-radius:8px; overflow:hidden; text-decoration:none; color:inherit;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.projects-section > a.project-card:hover{ transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
-
-/* altura em px */
-.projects-section > a.project-card .imagem{ width:100%; height:280px; overflow:hidden; }
-@media (max-width:767px){ .projects-section > a.project-card .imagem{ height:220px; } }
-
-.projects-section > a.project-card .imagem img{ width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
-.projects-section > a.project-card .conteudo{ padding:20px 24px; }
-
-/* garante stretch e evita overflow que “aperta” */
-.projects-section > *:not(.projects-header){ justify-self:stretch; min-width:0; }
-
-/* Normaliza a base tipográfica só nesta seção/página */
-.projects-section { font-size: 1rem; }          /* zera aumentos por EM/REM no container */
-.projects-section .conteudo { font-size: 1rem; } /* garante que o texto interno não escale */
+html {
+    font-size: 16px; /* garante REM/EM iguais ao resto do site */
+  }
+  
+body.projects-page {
+    font-size: 100%; /* se você usa a classe no <body> */
+  }
+  
+  /* ===========================================
+     PROJETOS: grid + altura da imagem
+     =========================================== */
+  .projects-section {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  
+  @media (min-width: 900px) {
+    .projects-section {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  .projects-header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  /* ===========================================
+     CARD DE PROJETO
+     =========================================== */
+  .projects-section > a.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-self: stretch;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .projects-section > a.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* ===========================================
+     IMAGEM DO CARD
+     =========================================== */
+  .projects-section > a.project-card .imagem {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 767px) {
+    .projects-section > a.project-card .imagem {
+      height: 220px;
+    }
+  }
+  
+  .projects-section > a.project-card .imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
+  /* ===========================================
+     CONTEÚDO DO CARD
+     =========================================== */
+  .projects-section > a.project-card .conteudo {
+    padding: 20px 24px;
+  }
+  
+  /* Espaçamento entre título e texto */
+  .project-card .conteudo h5 {
+    margin-bottom: 8px; /* ajuste o valor conforme o layout */
+  }
+  
+  /* ===========================================
+     Ajustes gerais
+     =========================================== */
+  .projects-section > *:not(.projects-header) {
+    justify-self: stretch;
+    min-width: 0;
+  }
+  
+  /* Normaliza a tipografia só nesta seção */
+  .projects-section {
+    font-size: 1rem;
+  }
+  
+  .projects-section .conteudo {
+    font-size: 1rem;
+  }
+  
