@@ -18,20 +18,27 @@ margin: 0 auto 8px auto; /* agora tem margin-bottom */
 }
 
 .hero-section p {
-opacity: 0; /* Oculto no início */
-animation: fadeIn 1s ease-out forwards; /* Aplica a animação */
-animation-delay: 0.5s; 
+  max-width: 600px;     /* limite da largura */
+  margin: 0 auto;       /* centraliza dentro do hero */
+  text-align: center;   /* mantém alinhamento */
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
 }
+
 
 
 @media (max-width: 767px) {
 .hero-section {
-padding: 40px 24px 0 24px;
-flex-direction: column; /* Alinha os itens um em cima do outro */
-text-align: center; 
-}
+  padding: 40px 24px 0 24px;
+  flex-direction: column; /* Alinha os itens um em cima do outro */
+  }
 .hero-section h1 {
-    font-size: 72px !important;
+    font-size: 66px !important;
+    text-align: left; 
+}
+.hero-section p {
+    text-align: left; 
 }
 
 }
@@ -134,7 +141,8 @@ text-align: center;
 
 /* breakpoints */
 @media (min-width: 640px) {
-  .skills-section { grid-template-columns: repeat(2, 1fr); }
+  .skills-section { grid-template-columns: repeat(2, 1fr); 
+  }
 }
 @media (min-width: 1024px) {
   .skills-section { grid-template-columns: repeat(3, 1fr); }
@@ -336,7 +344,8 @@ border-radius: 8px;
       padding: 0px 24px;
   }
   .contact-section h2 {
-      font-size: 72px;
+      font-size: 66px;
+      padding-top: 24px;
   }
 }
 
@@ -356,6 +365,16 @@ body.js-enabled .contact-section {
 .projects-section.animate, .contact-section.animate {
   opacity: 1;
   transform: translateY(0);
+}
+/* layout desktop já existe, então só mudamos no mobile */
+@media (max-width: 768px) {
+  .projects-header {
+    display: flex;
+    flex-direction: column;   /* empilha título + botão */
+    align-items: center;      /* centraliza os dois */
+    gap: 16px;                /* espaço entre eles */
+    text-align: center;
+  }
 }
 
 
