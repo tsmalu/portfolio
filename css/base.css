@@ -16,7 +16,7 @@
     font-family: 'MangoGrotesque';
     src: url('../fonts/MangoGrotesque-Medium.woff2') format('woff2'),
          url('../fonts/MangoGrotesque-Medium.woff') format('woff');
-    font-weight: 200;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -28,8 +28,10 @@ body {
     background-color: #F9F9F9;
     color: #383838;
     line-height: 1.6;
-}
 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
 
 footer {
 
@@ -39,9 +41,8 @@ footer {
 /* ------------------------------------------------------------------------------------ */
 /* TEXTO */
 p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    }
+    margin-bottom: 1rem;
+}
 
 h1, h2, h3, h4, h5, h6 {
       font-family: 'MangoGrotesque';
@@ -74,3 +75,16 @@ h5 {
 h6 {
     font-size:34px;
   }
+
+  p,
+li,
+td,
+th,
+blockquote,
+span,
+label,
+input,
+textarea,
+button {
+    font: inherit;
+}

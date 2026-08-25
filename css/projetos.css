@@ -429,3 +429,63 @@
     padding: 0 !important;
   }
 }
+
+
+/* -- tabela e citação no case --- */
+.table-wrapper {
+    margin: 2rem 0;
+    overflow-x: auto;
+}
+
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: inherit;
+}
+
+.project-table thead {
+    border-bottom: 2px solid #383838;
+}
+
+.project-table tbody tr {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.project-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.project-table th,
+.project-table td {
+    padding: 1.5rem 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Cabeçalho */
+.project-table th {
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+/* Mais espaço entre as colunas */
+.project-table th:not(:last-child),
+.project-table td:not(:last-child) {
+    padding-right: 4rem;
+}
+
+/* Etapas sem negrito */
+.project-table td:first-child {
+    width: 24%;
+    font-weight: 400;
+}
+
+/* Segunda coluna */
+.project-table td:nth-child(2) {
+    width: 30%;
+}
+
+/* Terceira coluna */
+.project-table td:nth-child(3) {
+    width: 46%;
+}
